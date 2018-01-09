@@ -1,1 +1,1 @@
-# dwa15-spring2018
+Course notes will be posted in this repository as they're released each week.
