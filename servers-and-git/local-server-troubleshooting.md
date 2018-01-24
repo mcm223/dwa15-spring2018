@@ -1,3 +1,5 @@
+# Local Server Debugging
+
 ## Log files
 If your MAMP or XAMPP Apache or MySQL server won't start, the first place you want to check for clues is your log files.
 
