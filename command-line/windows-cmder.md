@@ -31,12 +31,11 @@ Then set the destination to `C:\`
 
 Extraction may take several minutes.
 
-
-Within the resulting extracted folder `C:\cmder-master\`, you'll see the Cmder icon you can use to launch the program.
+Within the resulting extracted folder `C:\cmder-master\`, you'll see the Cmder executable `cmder.exe` which can be double clicked to launch the program.
 
 <img src='/images/cmder-in-destination@2x.png' alt='Launching Cmder'>
 
-I recommend creating a shortcut to `C:\cmder-master\cmder.exe` (in your start menu, task bar, etc.) so the program is easily accessible.
+(I recommend pinning `cmder.exe` to your start and/or task bar to make it easily accessible.)
 
 That's all you need to do to get Cmder rolling. The rest of this doc includes some notes about how Cmder is customized, but requires no action on your part.
 

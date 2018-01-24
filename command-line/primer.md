@@ -154,11 +154,14 @@ $ rm -ir practice
 Note the addition of the `r` flag, which is needed for recursively removing directories and their contents.
 
 
+## Aliases
+In the notes on Windows Cmder and Mac Terminal, I touched on aliases which allow you to create shortcuts for commands.
 
+For example, a command you'll see me using in lecture is `ll`. This is just an alias for the command `ls -laFG` (`ls` with flags that make the output optimal for reading).
+
+This is a common alias many system administrators use. Given that, I built it into the course version of the Cmder app and the instructions for configuring Mac Terminal.
 
 ## In conclusion...
 There is a lot more you can do in CL besides working with files and directories. The above exercise was just to get you familiar with working with commands and some basic directory navigation.
 
-See [Common Commands](https://github.com/susanBuck/dwa15-fall2016-notes/blob/master/00_Command_Line/05_Common-commands.md) for a quick cheat sheet on all the commands we used above.
-
-<!-- https://www.digitalocean.com/community/tutorials/basic-linux-navigation-and-file-management -->
+See [Common Commands](/command-line/common-commands) for a quick cheat sheet on all the commands used above.
