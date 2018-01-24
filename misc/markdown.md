@@ -1,14 +1,16 @@
-Markdown is a popular syntax format for styling text. On Github, you'll see Markdown used in their **Issues** and **Wiki** tools. Markdown is also commonly used to format code documentation and [`README.md`](https://en.wikipedia.org/wiki/README) files. Furthermore, Markdown is also used on popular software Q&A forums like [StackOverflow](https://stackoverflow.com).
+Markdown is a popular syntax format for styling text. On Github, you'll see Markdown used when authoring content using their Issues and Wiki tools. Markdown is also commonly used to format code documentation, [`README.md`](https://en.wikipedia.org/wiki/README) files, and when posting on popular software Q&A forums like [StackOverflow](https://stackoverflow.com).
 
-In short&mdash; Markdown is an essential tool for modern software developers, and thus it's one of the tangental skills you'll need in this course.
+In short&mdash; Markdown is an essential tool for modern software developers, and thus it's one of the tangential skills you'll apply in this course. Specifically, you'll need to use Markdown syntax when posting to the Issues forum and authoring `README.md` files for your projects.
 
 If you don't already know Markdown, fret not&mdash; it's a simple syntax language and shouldn't take more than a half hour to learn and master.
 
 To dig into Markdown read through this quick guide: [Github: Mastering Markdown](https://guides.github.com/features/mastering-markdown).
 
-Before you start, though, go to the [Issues](https://github.com/susanBuck/dwa15-fall2017/issues) forum for this course and click *New Issue* on the top right. Here you can draft an Issue and practice with Markdown syntax. You don't actually have to post the Issue, so don't worry about the content. As you're writing, switch between **Write** and **Preview** to see how your post is being styled.
+Before you start, though, go to the [Issues forum](https://issues.dwa15.com) for this course and click *New Issue* on the top right. Here you can draft a new post and practice with Markdown syntax. You shouldn't actually submit the post, so don't worry about the content. 
 
-<img src='http://making-the-internet.s3.amazonaws.com/dwa-markdown-write-and-preview@2x.png' style='max-width:px;' alt=''>
+As you're writing, switch between **Write** and **Preview** modes to see how your post is being styled.
+
+<img src='https://raw.githubusercontent.com/susanBuck/dwa15-spring2018/master/images/misc-markdown-practice-post%402x.png' alt='Practicing Markdown in Github Issues'>
 
 Of the styling features Markdown supports, here are the ones you should be sure to understand:
 
@@ -19,4 +21,4 @@ Of the styling features Markdown supports, here are the ones you should be sure 
 	+ Inline code
 	+ Block code w/ syntax highlighting
 
-After you've studied the above, read [this example post demonstrating Markdown features](https://github.com/susanBuck/dwa15-spring2018/issues/2).
+After you've studied the abovementioned guide, read [this example post demonstrating Markdown features](https://github.com/susanBuck/dwa15-spring2018/issues/2).
