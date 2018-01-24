@@ -4,14 +4,14 @@ Notes will be posted here as they're released each week.
 __Table of Contents__
 
 + Misc
-  + [Markdown](/misc/markdown)
+  + [Markdown](/misc/markdown.md)
 + Command Line
-  + [Introduction](/misc/intro)
-  + [Mac Terminal](/misc/mac-terminal)
-  + [Windows Cmder](/misc/windows-cmder)
-  + [Primer](/misc/primer)
-  + [Common Commands](/misc/common-commands)
-  + [Text editing with Nano](/misc/nano)
+  + [Introduction](/misc/intro.md)
+  + [Mac Terminal](/misc/mac-terminal.md)
+  + [Windows Cmder](/misc/windows-cmder.md)
+  + [Primer](/misc/primer.md)
+  + [Common Commands](/misc/common-commands.md)
+  + [Text editing with Nano](/misc/nano.md)
 + Servers and Git
 + PHP
 + Laravel
