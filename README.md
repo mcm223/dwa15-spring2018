@@ -6,12 +6,12 @@ __Table of Contents__
 + Misc
   + [Markdown](/misc/markdown.md)
 + Command Line
-  + [Introduction](/misc/intro.md)
-  + [Mac Terminal](/misc/mac-terminal.md)
-  + [Windows Cmder](/misc/windows-cmder.md)
-  + [Primer](/misc/primer.md)
-  + [Common Commands](/misc/common-commands.md)
-  + [Text editing with Nano](/misc/nano.md)
+  + [Introduction](/command-line/intro.md)
+  + [Mac Terminal](/command-line/mac-terminal.md)
+  + [Windows Cmder](/command-line/windows-cmder.md)
+  + [Primer](/command-line/primer.md)
+  + [Common Commands](/command-line/common-commands.md)
+  + [Text editing with Nano](/command-line/nano.md)
 + Servers and Git
 + PHP
 + Laravel
