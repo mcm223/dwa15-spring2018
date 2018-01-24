@@ -27,15 +27,14 @@ To do this, right click the downloaded `cmder-master.zip` file and choose *Extra
 
 Then set the destination to `C:\`
 
-<img src='/images/command-line-cmder-destination@2x.png' alt='Extracting Cmder'>
+<img src='/images/command-line-cmder-destination@2x.png' alt='Where to extract Cmder'>
 
 Extraction may take several minutes.
 
-<img src='http://making-the-internet.s3.amazonaws.com/sysadmin-extract-cmder@2x.png' style='max-width:400px; width:100%'>
 
 Within the resulting extracted folder `C:\cmder-master\`, you'll see the Cmder icon you can use to launch the program.
 
-<img src='http://making-the-internet.s3.amazonaws.com/sysadmin-cmder-in-destination@2x.png' style='max-width:602px; width:100%' alt='Launch Cmder'>
+<img src='/images/cmder-in-destination@2x.png' alt='Launching Cmder'>
 
 I recommend creating a shortcut to `C:\cmder-master\cmder.exe` (in your start menu, task bar, etc.) so the program is easily accessible.
 
