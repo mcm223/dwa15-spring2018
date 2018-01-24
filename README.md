@@ -6,7 +6,7 @@ __Table of Contents__
 + Misc
   + [Markdown](/misc/markdown)
 + Command Line
-  + [Introduction](/misc/intro
+  + [Introduction](/misc/intro)
   + [Mac Terminal](/misc/mac-terminal)
   + [Windows Cmder](/misc/windows-cmder)
   + [Primer](/misc/primer)
