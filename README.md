@@ -1,3 +1,6 @@
+Notes will be linked here as they're posted each week.
+If you spot a mistake or issue with a particular note set, please click the Edit button to make a suggestion for improvement.
+
 ## Table of Contents
 
 + Misc
