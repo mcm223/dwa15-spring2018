@@ -1,5 +1,6 @@
 Notes will be linked here as they're posted each week.
-If you spot a mistake or issue with a particular note set, please click the Edit button to make a suggestion for improvement.
+
+If you have a suggestion regarding a particular note set (correction, typo, etc.), please click the *Edit* button shown on each page to initiate a fork and propose the suggested edit.
 
 ## Table of Contents
 
