@@ -19,11 +19,17 @@ Download the dwa15 build of Cmder:<br> <a href='https://github.com/susanBuck/cmd
 ## Installing
 Cmder is designed as a "stand-alone" application, meaning it can be run from any directory on your computer. While most applications in Windows would live in your `C:\Program Files`, this is not a good location for Cmder since that directory requires administrative access, which will prevent Cmder from performing certain actions.
 
-Knowing that, my reccomendation is to place Cmder in your `C:\` directory for simplicity.
+Knowing that, my recommendation is to place Cmder in your `C:\` directory for simplicity.
 
-To do this, right click the downloaded `cmder-master.zip` file and choose *Extract all*, then set the path to extract to to `C:\`
+To do this, right click the downloaded `cmder-master.zip` file and choose *Extract all*...
 
-Extraction may take a few minutes.
+<img src='/images/command-line-cmder-extract-all@2x.png' alt='Extracting Cmder'>
+
+Then set the destination to `C:\`
+
+<img src='/images/command-line-cmder-destination@2x.png' alt='Extracting Cmder'>
+
+Extraction may take several minutes.
 
 <img src='http://making-the-internet.s3.amazonaws.com/sysadmin-extract-cmder@2x.png' style='max-width:400px; width:100%'>
 
