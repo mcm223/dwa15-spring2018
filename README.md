@@ -14,5 +14,8 @@ If you have a suggestion regarding a particular note set (correction, typo, etc.
   + [Common Commands](/command-line/common-commands.md)
   + [Text editing with Nano](/command-line/nano.md)
 + Servers and Git
+  + Introduction (coming in Week 2)
+  + [Local server setup](servers-and-git/local-server-setup.md)
+  + [Local server troubleshooting](servers-and-git/local-server-troubleshooting.md}
 + PHP
 + Laravel
