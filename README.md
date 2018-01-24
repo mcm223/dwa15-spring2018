@@ -16,6 +16,6 @@ If you have a suggestion regarding a particular note set (correction, typo, etc.
 + Servers and Git
   + Introduction (coming in Week 2)
   + [Local server setup](servers-and-git/local-server-setup.md)
-  + [Local server troubleshooting](servers-and-git/local-server-troubleshooting.md}
+  + [Local server troubleshooting](servers-and-git/local-server-troubleshooting.md)
 + PHP
 + Laravel
