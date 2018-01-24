@@ -41,7 +41,7 @@ If you see **two little green dots** next to *Apache* and *MySQL Server*, you kn
 
 <img src='http://making-the-internet.s3.amazonaws.com/vc-mamp-mac-all-systems-go@2x.png' class='' style='max-width:723px; width:100%' alt=''>
 
-If either of these services don't start up, you'll want to read these notes: [__Troubleshooting your local server__](/servers-and-git/local-server-troubleshooting.md).
+If either of these services don't start up, you'll want to read these notes: [__Local server troubleshooting__](/servers-and-git/local-server-troubleshooting.md).
 
 
 ### Your first file
@@ -71,7 +71,7 @@ If all goes well, *Apache* and *MySQL* in the *Modules* column should light up w
 
 <img src='http://making-the-internet.s3.amazonaws.com/vc-xampp-win-start-servers@2x.png' class='' style='max-width:723px; width:100%' alt=''>
 
-If either of these services don't start up, you'll want to read these notes: [__Troubleshooting your local server__](/servers-and-git/local-server-troubleshooting.md).
+If either of these services don't start up, you'll want to read these notes: [__Local Server Troubleshooting__](/servers-and-git/local-server-troubleshooting.md).
 
 
 ### Your first file

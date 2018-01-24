@@ -1,4 +1,4 @@
-# Local Server Debugging
+# Local Server Troubleshooting
 
 ## Log files
 If your MAMP or XAMPP Apache or MySQL server won't start, the first place you want to check for clues is your log files.
@@ -73,5 +73,5 @@ If the above actions don't set you on the right track, here are your next steps:
 
 + Open your Apache or MySQL log files and look at the recent errors.
 + Google search for key phrases in these errors to see solutions provided by other users with the same issue.
-+ Look in the course Issues to see if another student has had the same problem.
-+ If no one has posted the same problem, create a new post in Issues.
++ Look in the Issues forum to see if another student has had the same problem.
++ If no one has posted the same problem, create a new post.
