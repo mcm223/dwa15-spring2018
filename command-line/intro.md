@@ -1,3 +1,5 @@
+# Introduction
+
 ## What is the Command Line?
 The **Command Line Interface (CLI)** is a means of interacting with your computer via text commands. While it seems that the CLI is archaic compared to GUIs (Graphical User Interfaces) it's actually a very powerful method for interacting with files and programs.
 

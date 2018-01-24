@@ -1,3 +1,5 @@
+# Markdown
+
 Markdown is a popular syntax format for styling text. On Github, you'll see Markdown used when authoring content using their Issues and Wiki tools. Markdown is also commonly used to format code documentation, [`README.md`](https://en.wikipedia.org/wiki/README) files, and when posting on popular software Q&A forums like [StackOverflow](https://stackoverflow.com).
 
 In short&mdash; Markdown is an essential tool for modern software developers, and thus it's one of the tangential skills you'll apply in this course. Specifically, you'll need to use Markdown syntax when posting to the Issues forum and authoring `README.md` files for your projects.
