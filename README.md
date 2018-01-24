@@ -1,1 +1,1 @@
-<misc/markdown.md>
+[Test link](misc/markdown.md)
