@@ -1,10 +1,12 @@
+# Nano
+
 Nano was briefly covered in the Primer section, but let's take a closer look at why you would want to use nano, and instructions on how to use nano as an administrator.
 
----
+## Why use a command line text editor?
 
-There are many ways you can edit text files on your computer. You can use a GUI like TextEdit (Mac), Notepad (Windows), Atom, etc. Or you can use a Command Line based text editor such as nano, vim, or vi.
+There are many ways you can edit text files on your computer. You can use your favorite code editor, or a plain text editor like TextEdit (Mac) or Notepad (PC). Alternatively, you can use a command line based text editor such as nano, vim, or vi.
 
-Some developers love CL editors, others prefer GUIs. If you're in the latter category, there will still be times when you need to use a CL text editor because a GUI editor will have limitations. For example:
+Some developers love command line editors, others prefer GUI (graphical user interface) text editors. If you're in the latter category, there will still be times when you need to use a command line text editor because a GUI editor will have limitations. For example:
 
 1. Some files are locked and need administrator privileges to alter; your GUI editor may let you open the file, but it won't let you save.
 
@@ -12,11 +14,11 @@ Some developers love CL editors, others prefer GUIs. If you're in the latter cat
 
 3. You're SSH'd into a live server where you can't open files directly in your GUI.
 
-Given this, it's important to feel comfortable with a CL based editor. For our purposes, we'll use **nano**. It's not the most powerful CL editor, but it'll get the job done and it's the simplest to work with.
+Given this, it's important to feel comfortable with a command line text editor. For our purposes, we'll use **nano**. It's not the most powerful command line text editor, but it'll get the job done and it's the simplest to work with.
 
-If you are already an experienced command line user with a favorite CL text editor, there's no reason you have to switch to nano; stick with what you're comfortable with.
+If you are already an experienced command line user with a favorite text editor, there's no reason you have to switch to nano; stick with what you're comfortable with.
 
-But if you're new to this, our examples will use nano, so below are instructions you'll want to get comfortable with.
+But if you're new to this, my examples will use nano, so below are instructions you'll want to get comfortable with.
 
 
 ## Opening files
@@ -26,9 +28,9 @@ You can initiate editing a file like this:
 $ nano example.txt
 ```
 
-In our example, we're working with a file called `example.txt` that has the contents `Hello World!` in it.
+In this example, we're working with a file called `example.txt` that has the contents `Hello World!` in it.
 
-Once we initiate nano on this file, we see this:
+Once you initiate nano on this file, you should see this:
 
 <img src='http://making-the-internet.s3.amazonaws.com/sysadmin-nano-example-txt@2x.png' class='' style='max-width:989px; width:100%' alt=''>
 
