@@ -1,3 +1,5 @@
+# Permissions
+
 Files and folders have permissions which allows you control who can edit, view and/or execute the file/directory.
 
 If you run `ls -la` in a directory you can see information about the files/folders in that directory, including permission information:

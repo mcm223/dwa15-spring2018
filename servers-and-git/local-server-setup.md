@@ -58,7 +58,7 @@ That's it! Your local server for Mac is installed, running, and tested.
 
 
 ## XAMPP Setup on Windows
-Download **[xampp-win32-7.1.8-0-VC14-installer.exe](https://www.apachefriends.org/xampp-files/7.1.8/xampp-win32-7.1.8-0-VC14-installer.exe)**.
+Download **[xampp-win32-7.2.1-0-VC15-installer.exe](https://www.apachefriends.org/xampp-files/7.2.1/xampp-win32-7.2.1-0-VC15-installer.exe)**.
 
 Install XAMPP...
 

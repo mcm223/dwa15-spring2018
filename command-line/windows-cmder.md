@@ -8,7 +8,7 @@ In this course, we'll use a special build of Cmder that has the following benefi
 
 + Uses a version of Cmder that is tested across multiple systems
 + Includes [`elevate`](http://code.kliu.org/misc/elevate/) to easily run commands as an admin
-+ Includes `nano`, a simple CL text editor
++ Includes [`nano`](https://en.wikipedia.org/wiki/GNU_nano), a simple command line text editor
 
 <strong style='background-color:yellow; display:block; padding:5px;'>
 Download the dwa15 build of Cmder:<br> <a href='https://github.com/susanBuck/cmder/archive/master.zip'>https://github.com/susanBuck/cmder/archive/master.zip
@@ -31,7 +31,7 @@ Then set the destination to `C:\`
 
 Extraction may take several minutes.
 
-Within the resulting extracted folder `C:\cmder-master\`, you'll see the Cmder executable `cmder.exe` which can be double clicked to launch the program.
+Within the resulting extracted folder `C:\cmder-master\`, you'll see the Cmder executable `Cmder.exe` which can be double clicked to launch the program.
 
 <img src='/images/cmder-in-destination@2x.png' alt='Launching Cmder'>
 

@@ -1,4 +1,4 @@
-## What is the PATH variable?
+# PATH Variable
 When you run a command for a program in command line, it looks for the corresponding executable files using the directories listed in your **PATH variable** as a map. The PATH variable is one of many **Environment Variables** your computer uses.
 
 Given this, when you add a new executable/program you wish to use via command line, you have to add its directory to your PATH variable.
