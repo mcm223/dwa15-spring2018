@@ -164,4 +164,4 @@ This is a common alias many system administrators use. Given that, I built it in
 ## In conclusion...
 There is a lot more you can do in CL besides working with files and directories. The above exercise was just to get you familiar with working with commands and some basic directory navigation.
 
-See [Common Commands](/command-line/common-commands) for a quick cheat sheet on all the commands used above.
+See [Common Commands](/command-line/common-commands.md) for a quick cheat sheet on all the commands used above.
