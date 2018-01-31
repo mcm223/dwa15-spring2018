@@ -1,4 +1,4 @@
-# Local Server Troubleshooting
+# Local server troubleshooting
 
 ## Log files
 If your MAMP or XAMPP Apache or MySQL server won't start, the first place you want to check for clues is your log files.
@@ -11,14 +11,11 @@ Here are the log file locations:
     + MySQL errors: `C:\xampp\mysql\data\mysql_error`
     + Alternatively, from the XAMPP Control Panel, there's a *logs* button next to each service.
 
-Tip: The amount of information in log files
 
 ## Port issues
 The #1 cause of MAMP or XAMPP not being able to start Apache or MySQL is a conflicting port issue, that is, some other service on your computer is already using the port that Apache or MySQL is trying to use.
 
 Ideally, we'd like to use Apache's default port `80` and MySQL's default port `3306`.
-
-
 
 
 ## Freeing ports on Windows
@@ -34,13 +31,11 @@ With CurrPorts running, look for processes named `mysqld.exe` (MySQL), right cli
 __If you're having a port issue with Apache:__
 Follow the same steps as above, but search for processes labeled `httpd.exe` (short for *HTTP daemon*; it's equivalent to Apache) and terminate them.
 
-<img src='http://making-the-internet.s3.amazonaws.com/sysadmin-curr-ports@2x.png' style='max-width:729px; width:100%' alt='CurrPorts'>
+<img src='https://s3.amazonaws.com/making-the-internet/sysadmin-curr-ports@2x.png' style='max-width:729px; width:100%' alt='CurrPorts'>
 
 You can also look under the __Local Port__ column to find processes that are using your default MySQL (`3306`) or Apache (`80`) port.
 
 After you've identified and terminated the appropriate processes, return to XAMPP and attempt to restart your server.
-
-
 
 
 ## Freeing ports on a Mac
@@ -51,7 +46,7 @@ You can find this program by typing `Activity Monitor` into Spotlight (the littl
 __If you're having a port issue with MySQL:__
 Under the `CPU` column, search for `mysql`. Look for processes labeled `mysql`, select them, and then click the X on the top left to terminate them.
 
-<img src='http://making-the-internet.s3.amazonaws.com/sysadmin-mac-activity-monitor@2x.png' style='max-width:771px; width:100%' alt='Activity Monitor'>
+<img src='https://s3.amazonaws.com/making-the-internet/sysadmin-mac-activity-monitor@2x.png' style='max-width:771px; width:100%' alt='Activity Monitor'>
 
 __If you're having a port issue with Apache:__
 Follow the same steps as above, but search for processes labeled `httpd` (short for HTTP daemon, it's equivalent to Apache) and terminate them.
@@ -67,11 +62,11 @@ Common alternative ports in MAMP/XAMPP are 8888 for Apache and 8889 for MySQL.
 If you use an alternative Apache port, you will have to append this port to your URLs, e.g. `http://localhost:8888`.
 
 
+## Troubleshooting: Local server permissions issue - error 500  "Internal Server Error"
+Run this command on the document root:
 
-## Conclusion
-If the above actions don't set you on the right track, here are your next steps:
+```bash
+chmod -R g-w /path/to/document/root
+```
 
-+ Open your Apache or MySQL log files and look at the recent errors.
-+ Google search for key phrases in these errors to see solutions provided by other users with the same issue.
-+ Look in the Issues forum to see if another student has had the same problem.
-+ If no one has posted the same problem, create a new post.
+

@@ -23,17 +23,17 @@ Knowing that, my recommendation is to place Cmder in your `C:\` directory for si
 
 To do this, right click the downloaded `cmder-master.zip` file and choose *Extract all*...
 
-<img src='/images/command-line-cmder-extract-all@2x.png' alt='Extracting Cmder'>
+<img src='https://s3.amazonaws.com/making-the-internet//command-line-cmder-extract-all@2x.png' alt='Extracting Cmder'>
 
 Then set the destination to `C:\`
 
-<img src='/images/command-line-cmder-destination@2x.png' alt='Where to extract Cmder'>
+<img src='https://s3.amazonaws.com/making-the-internet//command-line-cmder-destination@2x.png' alt='Where to extract Cmder'>
 
 Extraction may take several minutes.
 
 Within the resulting extracted folder `C:\cmder-master\`, you'll see the Cmder executable `Cmder.exe` which can be double clicked to launch the program.
 
-<img src='/images/cmder-in-destination@2x.png' alt='Launching Cmder'>
+<img src='https://s3.amazonaws.com/making-the-internet/cmder-in-destination@2x.png' alt='Launching Cmder'>
 
 (I recommend pinning `cmder.exe` to your start and/or task bar to make it easily accessible.)
 

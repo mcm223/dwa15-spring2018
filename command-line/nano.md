@@ -32,7 +32,7 @@ In this example, we're working with a file called `example.txt` that has the con
 
 Once you initiate nano on this file, you should see this:
 
-<img src='http://making-the-internet.s3.amazonaws.com/sysadmin-nano-example-txt@2x.png' class='' style='max-width:989px; width:100%' alt=''>
+<img src='https://s3.amazonaws.com/making-the-internet/sysadmin-nano-example-txt@2x.png' class='' style='max-width:989px; width:100%' alt=''>
 
 Once your file is open in nano you can start making edits. Use the arrow keys on your keyboard to navigate around the file.
 

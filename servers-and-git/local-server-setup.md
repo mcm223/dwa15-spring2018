@@ -23,7 +23,7 @@ Download and install MAMP: <https://mamp.info/en/downloads>
 
 In **Preferences > Web Server**, note that the **Document Root** is, by default, set to `/Applications/MAMP/htdocs`.
 
-<img src='http://making-the-internet.s3.amazonaws.com/vc-mamp-htdocs-document-root@2x.png' class='' style='max-width:603px; width:100%' alt=''>
+<img src='https://s3.amazonaws.com/making-the-internet/vc-mamp-htdocs-document-root@2x.png' class='' style='max-width:603px; width:100%' alt=''>
 
 The Document Root is where the server &ldquo;points to&rdquo;, i.e. when you access your local site, it will serve files from this directory.
 
@@ -31,7 +31,7 @@ We'll eventually customize the document root as we start building individual app
 
 Also in Preferences, under **Ports** click *Set Apache & MySQL* ports to `80` & `3306`:
 
-<img src='http://making-the-internet.s3.amazonaws.com/vc-mamp-ports@2x.png' style='width:100%; max-width:540px'>
+<img src='https://s3.amazonaws.com/making-the-internet/vc-mamp-ports@2x.png' style='width:100%; max-width:540px'>
 
 The default Apache port is 80, so setting it to this makes it so you can access your local sites via the url `http://localhost`. If your Apache port is something else, for example, 8888, you'd have to access your sites via `http://localhost:8888`.
 
@@ -39,7 +39,7 @@ After you adjust your ports, MAMP should restart your local server.
 
 If you see **two little green dots** next to *Apache* and *MySQL Server*, you know everything started okay.
 
-<img src='http://making-the-internet.s3.amazonaws.com/vc-mamp-mac-all-systems-go@2x.png' class='' style='max-width:723px; width:100%' alt=''>
+<img src='https://s3.amazonaws.com/making-the-internet/vc-mamp-mac-all-systems-go@2x.png' class='' style='max-width:723px; width:100%' alt=''>
 
 If either of these services don't start up, you'll want to read these notes: [__Local server troubleshooting__](/servers-and-git/local-server-troubleshooting.md).
 
@@ -52,7 +52,7 @@ Paste in [this code](https://gist.github.com/susanBuck/3f133c6d64be0f6f27a9) to 
 
 Finally, load your `helloworld.php` file in your browser via this URL `http://localhost/helloworld.php`.
 
-<img src='http://making-the-internet.s3.amazonaws.com/vc-hello-world-done-on-mac@2x.png' class='' style='max-width:927px; width:100%' alt=''>
+<img src='https://s3.amazonaws.com/making-the-internet/vc-hello-world-done-on-mac@2x.png' class='' style='max-width:927px; width:100%' alt=''>
 
 That's it! Your local server for Mac is installed, running, and tested.
 
@@ -62,14 +62,14 @@ Download **[xampp-win32-7.2.1-0-VC15-installer.exe](https://www.apachefriends.or
 
 Install XAMPP...
 
-[Enlarge...](http://making-the-internet.s3.amazonaws.com/vc-xampp-install-on-windows@2x.png)
-<img src='http://making-the-internet.s3.amazonaws.com/vc-xampp-install-on-windows@2x.png' class='' style='max-width:1038px; width:100%' alt=''>
+[Enlarge...](https://s3.amazonaws.com/making-the-internet/vc-xampp-install-on-windows@2x.png)
+<img src='https://s3.amazonaws.com/making-the-internet/vc-xampp-install-on-windows@2x.png' class='' style='max-width:1038px; width:100%' alt=''>
 
 Once installation is complete, from the XAMPP Control Panel, start Apache and MySQL.
 
 If all goes well, *Apache* and *MySQL* in the *Modules* column should light up with a green background.
 
-<img src='http://making-the-internet.s3.amazonaws.com/vc-xampp-win-start-servers@2x.png' class='' style='max-width:723px; width:100%' alt=''>
+<img src='https://s3.amazonaws.com/making-the-internet/vc-xampp-win-start-servers@2x.png' class='' style='max-width:723px; width:100%' alt=''>
 
 If either of these services don't start up, you'll want to read these notes: [__Local Server Troubleshooting__](/servers-and-git/local-server-troubleshooting.md).
 
@@ -81,6 +81,6 @@ Paste in [this code](https://gist.github.com/susanBuck/3f133c6d64be0f6f27a9) to 
 
 Load your `helloworld.php` file in your browser via `http://localhost/helloworld.php`.
 
-<img src='http://making-the-internet.s3.amazonaws.com/vc-confirm-localhost-working-xampp-on-win@2x.png' class='' style='max-width:579px; width:100%' alt=''>
+<img src='https://s3.amazonaws.com/making-the-internet/vc-confirm-localhost-working-xampp-on-win@2x.png' class='' style='max-width:579px; width:100%' alt=''>
 
 That's it! Your local server for Windows is installed, running, and tested.

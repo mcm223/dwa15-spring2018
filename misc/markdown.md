@@ -12,7 +12,7 @@ Before you start, though, go to the [Issues forum](https://issues.dwa15.com) for
 
 As you're writing, switch between **Write** and **Preview** modes to see how your post is being styled.
 
-<img src='https://raw.githubusercontent.com/susanBuck/dwa15-spring2018/master/images/misc-markdown-practice-post%402x.png' alt='Practicing Markdown in Github Issues'>
+<img src='https://s3.amazonaws.com/making-the-internet/misc-markdown-practice-post%402x.png' alt='Practicing Markdown in Github Issues'>
 
 Of the styling features Markdown supports, here are the ones you should be sure to understand:
 

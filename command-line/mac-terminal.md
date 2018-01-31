@@ -58,7 +58,7 @@ __Close and re-open Terminal for the changes to take effect.__
 
 If everything works, you should see this whenever you open Terminal:
 
-<img src='http://making-the-internet.s3.amazonaws.com/sysadmin-after-bashrc@2x.png' style='max-width:526px; width:100%' alt='After adding .bashrc script'>
+<img src='https://s3.amazonaws.com/making-the-internet/sysadmin-after-bashrc@2x.png' style='max-width:526px; width:100%' alt='After adding .bashrc script'>
 
 Read through the template file, as it's well commented and explains everything it does.
 
@@ -101,4 +101,4 @@ See the section under *Aliases* in the `.bashrc` file for full details.
 
 The prompt is the line you see whenever CL is waiting for a command. In the template `.bashrc`, the prompt is configured to show you your current directory, plus, if you're in a directory that is a Git repository, it'll show you which branch you're on and if there are any changes to that branch.
 
-<img src='http://making-the-internet.s3.amazonaws.com/sysadmin-prompt-customizations@2x.png' style='max-width:802px; width:100%;'>
+<img src='https://s3.amazonaws.com/making-the-internet/sysadmin-prompt-customizations@2x.png' style='max-width:802px; width:100%;'>

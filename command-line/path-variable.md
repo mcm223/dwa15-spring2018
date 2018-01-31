@@ -13,7 +13,7 @@ echo $PATH
 
 Example output:
 
-<img src='http://making-the-internet.s3.amazonaws.com/sysadmin-example-echo-path@2x.png' style='max-width:660px;' alt=''>
+<img src='https://s3.amazonaws.com/making-the-internet/sysadmin-example-echo-path@2x.png' style='max-width:660px;' alt=''>
 
 Note that each path in the PATH variable is separated by a colon.
 

@@ -37,7 +37,7 @@ Looking at the example `-rw-r--r--`:
 
 Here's a graphic to visualize the above description:
 
-<img src='http://making-the-internet.s3.amazonaws.com/sysadmin-example@2x.png' class='' style='max-width:345px; width:100%' alt=''>
+<img src='https://s3.amazonaws.com/making-the-internet/sysadmin-example@2x.png' class='' style='max-width:345px; width:100%' alt=''>
 
 Here's some practice reading permission strings:
 
