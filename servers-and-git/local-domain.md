@@ -33,37 +33,7 @@ Include conf/extra/httpd-vhosts.conf
 ```
 
 
-## Step 2. Create a new host
-
-Next, open your computer's `hosts` file. This file can be used to route domains to an IP address of your choice.
-
-* Mac: `/private/etc/hosts`
-* Windows: `c:/Windows/System32/drivers/etc/hosts`
-
-(Note, there's no extension on this file, it's simply called `hosts`)
-
-The hosts file is protected, so you'll need to open it with administrator privileges.
-
-Mac:
-```bash
-$ sudo nano /private/etc/hosts
-```
-
-Windows:
-```bash
-$ elevate nano c:\Windows\System32\drivers\etc\hosts
-```
-
-At the bottom of your hosts file, add a new host:
-
-```txt
-127.0.0.1 hello-world.loc
-```
-
-This is telling your computer that whenever you access `http://hello-world.loc` from your computer, it should map to the ip address `127.0.0.1` (the IP address of your local server).
-
-
-## Step 3. Virtual Host entry
+## Step 2. Virtual Host entry
 
 Next, tell Apache on your local server how to handle requests to `http://hello-world.loc` via a Virtual Host entry.
 
@@ -118,6 +88,40 @@ A breakdown of the key parts of the above VirtualHost blocks:
 
 Note, the above VirtualHost blocks assumes you're running on Port 80 (`*:80`). If you're running your local Apache on a different port, make that edit.
 
+
+## Step 3. Create a new host
+
+Next, open your computer's `hosts` file. This file can be used to route domains to an IP address of your choice.
+
+* Mac: `/private/etc/hosts`
+* Windows: `c:/Windows/System32/drivers/etc/hosts`
+
+(Note, there's no extension on this file, it's simply called `hosts`)
+
+The hosts file is protected, so you'll need to open it with administrator privileges.
+
+Mac:
+```bash
+$ sudo nano /private/etc/hosts
+```
+
+Windows:
+```bash
+$ elevate nano c:\Windows\System32\drivers\etc\hosts
+```
+
+At the bottom of your hosts file, add a new host:
+
+```txt
+127.0.0.1 hello-world.loc
+```
+
+This is telling your computer that whenever you access `http://hello-world.loc` from your computer, it should map to the ip address `127.0.0.1` (the IP address of your local server).
+
+
+
+
+## Test it 
 **Restart your local server** and test out your local URL.
 
 Make sure you explicitly type in `http://hello-world.loc` with `http://` at the beginning. If you don't, your browser may try and do a web search for `hello-world.loc` because it does not recognize `.loc` as a domain extension.
@@ -162,8 +166,9 @@ Don't forget to restart your server after making these changes.
 ## Summary
 To be repeated every time you want to add a new app:
 
-+ Add a new local URL in your computer's `host` file.
 + Add a new `<VirtualHost>` record block in MAMP/Apache's `httpd-vhosts.conf` file.
++ Add a new local URL in your computer's `host` file.
+
 
 Note how it's only Steps 2 and 3 above that need to be repeated for any new apps. Step 1 is a one time deal to get Virtual Hosts working.
 
