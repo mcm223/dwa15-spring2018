@@ -19,7 +19,7 @@ Other steps you've taken up until this point include:
 + Setting up a Github.com account
 + Setting up Git
 + Creating a new DigitalOcean droplet
-+ Creating SSH key connections between the following:
++ Creating [SSH key connections](/servers-and-git/ssh-keys-cheat-sheet.md) between the following:
     + Your computer <-> Github.com
     + Your computer <-> DigitalOcean server
     + DigitalOcean server <-> Github.com
