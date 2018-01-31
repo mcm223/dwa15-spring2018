@@ -1,5 +1,4 @@
 # New App Cheat Sheet
-
 The following is a summary of the steps you should take when creating/deploying a new application. For complete details, refer to the appropriate note set.
 
 ## Step 1. Create the new application directory/repository
@@ -8,9 +7,9 @@ The following is a summary of the steps you should take when creating/deploying 
 Create a new repository on Github.com, initializing it with a README.md file
 
 Clone that repository to your `htdocs` folder.
-```
-cd /path/to/htdocs/folder
-git clone git@github.com:username/hello-world.git
+```bash
+$ cd /path/to/htdocs/folder
+$ git clone git@github.com:username/hello-world.git
 ```
 
 ### Option B: Your computer to Github
@@ -19,14 +18,12 @@ Create the new project directory in your `htdocs` folder and run `git init` to i
 Create a new repository on Github.com but *don't* initialize it with a README.md file.
 
 Locally, in your project directory, connect it to it to the repository on Github:
-```xml
-git remote add origin git@github.com:username/hello-world.git
+```bash
+$ git remote add origin git@github.com:username/hello-world.git
 ```
 
 
-
 ## Step 2. Local domain
-
 Edit your hosts file, adding a new local domain (follow the pattern of existing domains)
 
 * Mac: `/private/etc/hosts`
@@ -36,16 +33,18 @@ Then, add a new VirtualHosts block (following the pattern of existing VirtualHos
 
 Mac:
 ```bash
-$ sudo nano /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf
+$ nano /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf
 ```
 
 Windows:
 ```bash
-$ elevate nano c:\xampp\apache\conf\extra\httpd-vhosts.conf
+$ nano c:\xampp\apache\conf\extra\httpd-vhosts.conf
 ```
 
-## Step 3. Deploy to production
+Stop and restart your local server for these changes to take effect.
 
+
+## Step 3. Deploy to production
 SSH into your DigitalOcean droplet and clone your application to the `/var/www/html` directory:
 
 ```bash
@@ -57,10 +56,10 @@ $ git clone git@github.com:username/hello-world.git
 
 Add a new VirtualHost block to `/etc/apache2/sites-enabled/000-default.conf` that points the desired subdomain (e.g. `hello-world.yourdomain.com`) to the desired document root (e.g. `/var/www/html/hello-world`).
 
-Remember that Laravel projects need to use the `public/` folder as the document root.
+(If you're creating a Laravel app, recall it will need to use the `public/` folder as the document root).
 
-Save your changes to 000-default.conf and then restart Apache:
+Save your changes to `000-default.conf` and then restart Apache:
 
-```xml
-service apache2 restart
+```bash
+$ service apache2 restart
 ```
