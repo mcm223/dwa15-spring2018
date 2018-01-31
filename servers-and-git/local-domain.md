@@ -1,14 +1,14 @@
 So far, you've created a new application called `hello-world` that exists as a copy on Github.com and also your local machine. Now let's look at how you'll actually run/preview this application via your local server.
 
-In week 1, we accessed our local server by visiting `http://localhost` which loaded the contents of our `htdocs` folder since that's what the document root was configured to.
+In Week 1, we accessed our local server by visiting `http://localhost` which loaded the contents of our `htdocs` folder since that's what the document root was configured to.
 
 We could switch between working on different applications by changing the document root to point to whatever project we're working on, but that would get tedious. Instead, we want to create unique local URLs we can use to access each application we build.
 
 For example, we want to start with a URL `http://hello-world.loc` that points to `htdocs/hello-world` as its document root.
 
-Likewise, you'll do the same thing for each of the 4 unique applications you build for the projects in this course (`http://p1.loc` => `/htdocs/p1/`, `http://p2.loc` => `htdocs/p2/`, etc.)
+Likewise, you'll do the same thing for each of the 4 unique applications you build for the projects in this course (`http://p1.loc` => `htdocs/p1`, `http://p2.loc` => `htdocs/p2`, etc.)
 
-In order to do this, we'll use something called **Virtual Hosts**.
+In order to do this, we'll configure our Apache web servers to run multiple applications via [Virtual Hosts](https://httpd.apache.org/docs/2.4/vhosts/). 
 
 
 ## Step 1. Tell Apache to use the virtual hosts file
@@ -65,9 +65,9 @@ This is telling your computer that whenever you access `http://hello-world.loc` 
 
 ## Step 3. Virtual Host entry
 
-Next, tell your local server how to handle requests to `http://hello-world.loc` via a VirtualHost entry.
+Next, tell Apache on your local server how to handle requests to `http://hello-world.loc` via a Virtual Host entry.
 
-Open your `httpd-vhosts.conf` file.
+This is done via Apache's `httpd-vhosts.conf` config file.
 
 Mac:
 ```bash
@@ -122,8 +122,8 @@ Note, the above VirtualHost blocks assumes you're running on Port 80 (`*:80`). I
 
 Make sure you explicitly type in `http://hello-world.loc` with `http://` at the beginning. If you don't, your browser may try and do a web search for `hello-world.loc` because it does not recognize `.loc` as a domain extension.
 
-## Fixing `http://localhost`
 
+## Fixing `http://localhost`
 After you make the above change you'll notice that `http://localhost` no longer works as expected&mdash; instead of pointing the document root you configure in MAMP/XAMPP, it will start pointing to the first VirtualHost block in your `httpd-vhosts.conf` file.
 
 To fix this, you can add a VirtualHost block specifically for `http://localhost`. I recommend having localhost just point to your htdocs folder.
@@ -165,7 +165,7 @@ To be repeated every time you want to add a new app:
 + Add a new local URL in your computer's `host` file.
 + Add a new `<VirtualHost>` record block in MAMP/Apache's `httpd-vhosts.conf` file.
 
-Note how it's only Steps 2 and 3 above that need to be repeated for any new apps. Step 1 is a one time deal to get virtual hosts working.
+Note how it's only Steps 2 and 3 above that need to be repeated for any new apps. Step 1 is a one time deal to get Virtual Hosts working.
 
 
 ## Troubleshooting
