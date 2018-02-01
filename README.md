@@ -33,4 +33,16 @@ If you have a suggestion regarding a particular topic (correction, typo, etc.), 
         + [New app cheat sheet](/servers-and-git/new-app-cheat-sheet.md)
         + [Increasing server security](/servers-and-git/increasing-server-security.md)
 + PHP
+    + [Intro](/php/intro.md)
+    + [Syntax](/php/syntax.md)
+    + [Error reporting & configs](/php/error-reporting-and-configs.md)
+    + [Data types](/php/data-types.md)
+    + [Variables](/php/variables.md)
+    + [Conditionals](/php/conditionals.md)
+    + [Functions](/php/functions.md)
+    + [Imports](/php/imports.md)
+    + [Arrays](/php/arrays.md)
+    + [PHP and HTML](/php/php-and-html.md)
+    + Extras
+        + [Random quote tips (P1)](/php/random-quote-tips.md)
 + Laravel
