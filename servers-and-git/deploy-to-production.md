@@ -59,13 +59,13 @@ From your DigitalOcean dashboard, find the big green button labeled *Create Drop
 
 On the screen that follows, make your Droplet settings match the following options:
 
-<img src='https://s3.amazonaws.com/making-the-internet/vc-digital-ocean-new-droplet@2x.png' style='max-width:1070px; width:100%' alt='New Droplet at Digital Ocean'>
+<img src='https://s3.amazonaws.com/making-the-internet/vc-digital-ocean-new-droplet@2x.png' style='max-width:1031px; width:100%' alt='New Droplet at Digital Ocean'>
 
 
 ## Log in to your new server droplet via SSH
 Once your Droplet is created, make note if its IP address:
 
-<img src='https://s3.amazonaws.com/making-the-internet/vc-do-new-ip-address@2x.png' style='max-width:1350px; width:100%' alt='New IP address on Droplet'>
+<img src='https://s3.amazonaws.com/making-the-internet/vc-do-new-ip-address@2x.png' style='max-width:835px; width:100%' alt='New IP address on Droplet'>
 
 From your local command line, SSH into your DigitalOcean droplet using the username `root` and the IP address:
 
@@ -174,17 +174,14 @@ Your directory structure on DigitalOcean should now look like this:
 
 + `/var/www/html`
     * `hello-world/`
-        * `index.html`
-        * `info.php`
+    * `index.html`
+    * `info.php`
         
-Don't worry right now about previewing this application in the browser&mdash; we'll cover that in the next note set.
+Don't worry right now about previewing the *hello-world* app in the browser&mdash; we'll cover that in the next note set.
 
 
 ## Moving forward...
-
-
-
-Deployment is the process of moving changes from your local environment to production.
+Deployment is the process of moving changes from your local server to production.
 
 Once your repository is cloned from Github.com to DigitalOcean, the steps for deploying changes looks like this:
 
@@ -192,15 +189,12 @@ Once your repository is cloned from Github.com to DigitalOcean, the steps for de
 2. Change directories into your project
 3. Run `git pull origin master` to sync any new changes
 
-
 So a typical workflow might look like this:
 
 1. Sit down for the afternoon to work on your project. Make lots of changes to your local files, testing the changes on your local server.
 2. After a couple hours, you're done for the day, so you want to check in your latest changes and update your live server.
 3. You stage, commit and push all your local changes to your remote repository at Github.
 4. Finally, you SSH into your Droplet and pull the latest changes.
-
-
 
 
 ## Tips/Notes

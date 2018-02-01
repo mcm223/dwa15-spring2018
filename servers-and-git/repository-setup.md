@@ -23,19 +23,19 @@ In this example, the address is `git@github.com:susanBuck/hello-world.git`. (If 
 Via command line on your computer, navigate to your htdocs folder where where you'll clone the `hello-world` repository.
 
 __Mac__ users:
-```xml
-cd /Applications/MAMP/htdocs/
+```bash
+$ cd /Applications/MAMP/htdocs/
 ```
 
 __Windows__ users:
-```xml
-cd c:\xampp\htdocs
+```bash
+$ cd c:\xampp\htdocs
 ```
 
 Once in `htdocs`, execute the following line to clone your repository on Github.com to your computer, replacing `yourGithubUsername`:
 
-```xml
-git clone git@github.com:yourGithubUsername/hello-world.git
+```bash
+$ git clone git@github.com:yourGithubUsername/hello-world.git
 ```
 
 If all went well, you should see git clone the repository, and once it's completed you should have a folder called `hello-world` in your document root (`htdocs`).

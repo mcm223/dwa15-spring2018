@@ -122,9 +122,7 @@ To make your VirtualHost changes take effect, restart Apache with this command:
 $ service apache2 restart
 ```
 
-Once the restart is complete, test out your subdomain `http://hello-world.yourdomain.com`.
-
-<img src='https://s3.amazonaws.com/making-the-internet/version-control-subdomain-good@2x.png' class='' style='max-width:603px;' alt='Subdomain working'>
+Once the restart is complete, test out your subdomain `http://hello-world.yourdomain.com`. You should see the same version of your *hello-world* application that you saw when testing it locally.
 
 
 ## Aside
