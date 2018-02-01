@@ -13,7 +13,7 @@ If you have a suggestion regarding a particular topic (correction, typo, etc.), 
     + [Mac Terminal](/command-line/mac-terminal.md)
     + [Windows Cmder](/command-line/windows-cmder.md)
     + [Primer](/command-line/primer.md)
-    + [Common Commands](/command-line/common-commands.md)
+    + [Common commands](/command-line/common-commands.md)
     + [Text editing with Nano](/command-line/nano.md)
     + Extras
         + [Permissions](/command-line/permissions.md)

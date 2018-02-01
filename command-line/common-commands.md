@@ -1,5 +1,4 @@
-
-## Common Commands
+# Common commands
 | Description        | Command
 | ------------- |:-------------:|
 | Find out which directory you're in <br> (*present working directory*) | `pwd`
