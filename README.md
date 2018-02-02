@@ -30,7 +30,7 @@ If you have a suggestion regarding a particular topic (correction, typo, etc.), 
     + [Summary](/servers-and-git/summary.md)
     + Extras
         + [Local server troubleshooting](/servers-and-git/local-server-troubleshooting.md)
-        + [Git tips and troubleshooting](/servers-and-git/git-troubleshooting.md)
+        + [Git tips and troubleshooting](/servers-and-git/git-tips-and-troubleshooting.md)
         + [SSH keys cheat sheet](/servers-and-git/ssh-keys-cheat-sheet.md)
         + [New app cheat sheet](/servers-and-git/new-app-cheat-sheet.md)
         + [Increasing server security](/servers-and-git/increasing-server-security.md)
