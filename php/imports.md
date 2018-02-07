@@ -8,7 +8,7 @@ A common use case for importing files, in any language, is to import a set of co
 
 As an example, create a new file called `helpers.php` in the document root from which you're working.
 
-[Fill this file with the code found here...](https://github.com/susanBuck/php/blob/master/helpers.php)
+[Fill this file with the code found here...](https://github.com/susanBuck/dwa15-php/blob/master/includes/helpers.php)
 
 This code includes 2 helper functions:
 
@@ -40,7 +40,7 @@ Moving forward in the notes, if you see the `dump` function being used in exampl
 ## include vs. require
 The difference between include and require is that include will not throw an error if the file is not found.
 
-To demonstrate, imagine you're trying to open a file called `foobar.php` but, for whatever reason, it doesn't exist.
+To demonstrate, imagine you're trying to open a file called `foobar.php` but, for whatever reason, it does not exist.
 
 This would cause an error:
 ```php
