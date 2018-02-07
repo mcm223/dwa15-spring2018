@@ -1,6 +1,6 @@
 # Syntax
 
-To practice some basic PHP skills, lets piggy-back on the `hello-world` example application set up in Week 2. 
+To practice some basic PHP skills, let's piggy-back on the `hello-world` example application set up in Week 2. 
 
 For this note set, create a new file at `hello-world/syntax.php` and paste in the following code:
 
@@ -18,9 +18,7 @@ Load this file in your browser via your local server (`http://hello-world.loc/sy
 
 <img src='https://s3.amazonaws.com/making-the-internet/php-syntax-in-browser@2x.png' style='max-width:626px;' alt='Basics PHP page loaded in the browser'>
 
-Study each line of the example and note that it...
-
-Sets 3 variables (an Integer and two Strings):
+Study each line of the example and note that it sets 3 variables (an Integer and two Strings):
 
 ```php
 $temperature = 75;
@@ -28,12 +26,12 @@ $scale = "F";
 $location = 'Cambridge';
 ```
 
-And outputs a String using the [echo](http://php.net/manual/en/function.echo.php) construct:
+...and outputs a String using the [echo](http://php.net/manual/en/function.echo.php) construct:
 ```php
 echo 'Temperature in '.$location.': '.$temperature.' '.$scale;
 ```
 
-Additional observations...
+Additional observations:
 * PHP code is surrounded by a start PHP tag `<?php` and an end PHP tag `?>`.
 * PHP statements end with a semi-colon.
 * Variables are indicated with a `$` sign.

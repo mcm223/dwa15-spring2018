@@ -9,6 +9,8 @@ Specifically, each project should abide by the following interface guidelines:
 + There should be a consistent and logical ordering in the size/presentation of headers.
 + All links should be distinguished from regular text in some clear way (underlined, a different font color, etc.)
 + In most cases, button values should be changed from the default (i.e. `Submit`) to reinforce the action being taken (e.g. `Save changes`, `Place order`)
++ Any form inputs that are required should be labeled as such; exceptions are made for small forms where all inputs are required (e.g. a log in form)
++ Any form inputs that have non-obvious requirements should be labeled as such. For example, if a password must be at least 6 characters long, let the user know this in the form interface. Do not wait until the user has submitted the form to let them know about the requirement via your validation reporting. 
 + Always provide feedback&mdash; your interface should speak to your user, letting them know when their actions are right, wrong, or misunderstood.
 + Error messages and confirmation messages should stand out from the content of the rest of the page so they don't go unnoticed. 
     + Error messages should be some variation of red.

@@ -8,6 +8,9 @@ If you have a suggestion regarding a particular topic (correction, typo, etc.), 
 # Table of contents
 + Misc
     + [Markdown](/misc/markdown.md)
+    + [Interface](/misc/interface.md)
+    + [PhpStorm](/misc/phpstorm.md)
+    + [Code style](/misc/code-style.md)
 + Command Line
     + [Introduction](/command-line/intro.md)
     + [Mac Terminal](/command-line/mac-terminal.md)
@@ -45,6 +48,9 @@ If you have a suggestion regarding a particular topic (correction, typo, etc.), 
     + [Imports](/php/imports.md)
     + [Arrays](/php/arrays.md)
     + [PHP and HTML](/php/php-and-html.md)
+    + [Loops](/php/loops.md)
+    + [Forms](/php/forms.md)
+    + [Form security](/php/form-security.md)
     + Extras
         + [Random quote tips (P1)](/php/random-quote-tips.md)
 + Laravel

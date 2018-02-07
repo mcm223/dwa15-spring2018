@@ -18,16 +18,14 @@ PHP has two style guides maintained by the [PHP Framework Interop Group (FIG)](h
 
 When a language has an official style guide, it's not required that it be implemented 100%, and teams may decide to go off course with their own variations. The emphasis on style is not about which style guide you're following, simply that you are following *some* style guide and are aiming to be consistent and thoughtful in regards to code design.
 
-**In this course, we will follow the PSR-1/PSR-2 guidelines.** 
+**In this course, we will follow the PSR-1/PSR-2 guidelines in our PHP code files** 
 
 You can diverge from these guidelines, but you will be required to outline your divergences in your project's README.md file, and the divergences must be reasonable.
 
 PhpStorm will *mostly* keep you in line with the guidelines, so use it to reformat your code often, and pay attention to warnings/notes it shows you.
 
 
-
 ## Example
-
 Consider the following code example which is problematic in several ways:
 
 ```php
@@ -110,4 +108,5 @@ That being said, here are some common issues I see in student's HTML code that y
 + [Don't mix character cases](https://github.com/hail2u/html-best-practices#dont-mix-character-cases)
 
 
-
+## PHP Code in display files
+You may diverge PSR-1/PSR-2 guidelines in display files (.html, .blade.php) that incorporate PHP if it's for the purposes of writing more legible display code. 
