@@ -107,6 +107,8 @@ That being said, here are some common issues I see in student's HTML code that y
 + [Don't use placeholder attribute for labeling](https://github.com/hail2u/html-best-practices#dont-use-placeholder-attribute-for-labeling)
 + [Don't mix character cases](https://github.com/hail2u/html-best-practices#dont-mix-character-cases)
 
+## Validating HTML
+During development and before submission, run any/all pages of your project via the [w3 validator](https://validator.w3.org) to identify and fix any errors or warnings. (If you disagree with any of the warnings the validator is showing, email me ahead of time so we can confer on whether ignoring the warning is acceptable).
 
 ## PHP Code in display files
 You may diverge PSR-1/PSR-2 guidelines in display files (.html, .blade.php) that incorporate PHP if it's for the purposes of writing more legible display code. 
