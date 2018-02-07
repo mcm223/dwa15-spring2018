@@ -67,7 +67,7 @@ Things PhpStorm will alert you about:
 General problems that PhpStorm can't catch but you should be aware of:
 + The variable name `$x` is generic and in a larger context it could be confusing. A better name would be `$result`.
 + There's a commented-out line of code that's not being used, and no context is provided as to why it's still there. Lines like this should be cleaned up when finalizing a project. Exceptions are made if you comment that you're leaving the old code in for learning purposes.
-
++ The structure/use of the if/else construct and return statement could be optimized.
 
 Here's that same example, cleaned up and optimized:
 ```php
