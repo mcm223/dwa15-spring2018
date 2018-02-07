@@ -60,28 +60,28 @@ Things PhpStorm will clean-up for you when you *Reformat Code*:
 + Incorrect indentation&mdash; the first `return` statement is a child of the `if` construct and thus it should be indented.
 
 Things PhpStorm will alert you about:
++ There's a typo in the variable name (`$temprature` should be `$temperature`).
 + Missing semi-colon at the end of the line setting variable `$x`.
 + Unnecessary closing PHP tag
 
 General problems that PhpStorm can't catch but you should be aware of:
 + The variable name `$x` is generic and in a larger context it could be confusing. A better name would be `$result`.
-+ While it works, there's a typo in the variable name (`$temprature` should be `$temperature`).
 + There's a commented-out line of code that's not being used, and no context is provided as to why it's still there. Lines like this should be cleaned up when finalizing a project. Exceptions are made if you comment that you're leaving the old code in for learning purposes.
 
 
-Here's that same example, cleaned up:
+Here's that same example, cleaned up and optimized:
 ```php
 <?php
 
 function getCelsius($temperature = null, $includeUnit = true)
 {
-    $x = ($temperature - 32) / 1.8;
+    $result = ($temperature - 32) / 1.8;
 
-    if ($includeUnit == true) {
-        return $x .= ' C';
-    } else {
-        return $x;
+    if ($includeUnit) {
+        $result .= ' C';
     }
+
+    return $result;
 }
 ```
 
