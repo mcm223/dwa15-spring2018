@@ -9,7 +9,7 @@ PhpStorm is an IDE (Integrated Development Environment), which is a **super-powe
 
 An IDE is programmed to understand the code you're writing and assist you along the way with things like **code completion**, **on-the-fly error prevention**, **code clean-up and refactoring tools**, as well as **sophisticated tools for navigating through the structure of your code**.
 
-Alternatives to IDEs include code editors such as [Sublime text](https://www.sublimetext.com/3).
+Alternatives to IDEs include code editors such as [Sublime](https://www.sublimetext.com/3) or [Atom](https://atom.io).
 
 Programs like Sublime text *can* be powerful, especially when you install plugins, but PhpStorm is powerful &ldquo;out of the box&rdquo; and it would take a lot of plugins to match the features in PhpStorm. Furthermore, even if you loaded Sublime with tons of plugins to get all the features you needed, the software would start to become bloated and you're not guaranteed all the various plugins are working seamlessly together.
 
@@ -62,7 +62,7 @@ Get into preferences:
 
 Skim through the settings to get a sense of what can be customized.
 
-Note there's a search bar to find the setting you're looking for
+Note there's a search bar to find the setting you're looking for.
 
 Customize what you see/don't see in the interface:
 *Appearance & Behavior* > *Menus & Toolbars*
@@ -84,8 +84,8 @@ Others:
 
 
 ## Tools we're not using
-+ MySQL
-+ Command line
++ Databases
++ Terminal
 + Version Control
 + Debugging
 
