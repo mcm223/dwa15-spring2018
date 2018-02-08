@@ -29,7 +29,7 @@ Next we'll use the command `adduser` followed by a username of your choice.
 
 During this procedure, you'll be prompted to create a password for this new user. Strong passwords are essential to prevent brute force attacks (where a machine is used to try and guess your password). If you're not confident in your ability to generate a secure password, use a [password generator tool](http://correcthorsebatterystaple.net/).
 
-With your password chosen, initiate the new user (replace `newuser` with a username of your choosing):
+With your password chosen, initiate the new user (replace `susanbuck` with a username of your choosing):
 
 ```bash
 $ adduser susanbuck
@@ -86,7 +86,7 @@ Save your changes (`ctrl` + `x`, then `y`, then *Enter*).
 ## SSH access for your new user
 When you first set up DigitalOcean, you created a SSH key connection between your computer and your server. This allowed you to SSH into your Droplet as `root`, without having to enter a password.
 
-You'll want the same convenience/security that SSH keys provide for your new user as well, so lets set that up.
+You'll want the same convenience/security that SSH keys provide for your new user as well, so let's set that up.
 
 (In the following steps, it's assumed that you've already created a public key (`id_rsa.pub`) on your local machine when you first followed the [Git setup notes](https://github.com/susanBuck/dwa15-fall2017/blob/master/01_Servers_and_Git/03_Git_setup.md).)
 
@@ -99,7 +99,7 @@ Mac:
 $ cat ~/.ssh/id_rsa.pub
 ```
 
-Windows/Terminal (replace `YourName`):
+Windows/Cmder (replace `YourName`):
 ```bash
 $ cat C:\Users\YourName\.ssh\id_rsa.pub
 ```
@@ -130,7 +130,7 @@ For security purposes, we'll make it so only you (i.e. the user you're logged in
 $ chmod 700 ~/.ssh
 ```
 
-(Permissions are beyond the scope of these notes; if interested, you can [learn more here](https://github.com/susanBuck/dwa15-fall2015-notes/blob/master/00_Command_Line/07_Permissions.md).)
+(Permissions are beyond the scope of these notes; if interested, you can [learn more here](/command-line/permissions.md).)
 
 Next, open `authorized_keys` using nano:
 
@@ -198,7 +198,7 @@ $ ssh -T git@github.com
 
 
 ## SSH Key Cheat Sheet
-If you're having a hard time wrapping your head around the various SSH key pairs we've set up in this course, check out this [SSH Keys Cheat Sheet](https://github.com/susanBuck/dwa15-fall2017/blob/master/01_Servers_and_Git/99_SSH_Keys_Cheat_Sheet.md).
+If you're having a hard time wrapping your head around the various SSH key pairs we've set up in this course, check out this [SSH Keys Cheat Sheet](/servers-and-git/ssh-keys-cheat-sheet.md).
 
 
 
@@ -218,7 +218,7 @@ You should see this message:
 cat: /var/log/auth.log: Permission denied
 ```
 
-This doesn't seem to make sense... Didn't we just give our new user administrative privileges in the steps above?
+This doesn't seem to make sense&mdash; didn't we just give our new user administrative privileges in the steps above?
 
 We did! *However*, in order to utilize these privileges, we need to prefix commands with `sudo`.
 
