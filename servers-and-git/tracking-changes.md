@@ -112,7 +112,7 @@ First, edit your `README.md` file again adding the URL for this course below you
 
 Second, find an image (any image will do) and save it in a new directory called `/hello-world/images/`. You'll see with this example how git can track changes to files other than code/text, such as images.
 
-Finally, create a new file called `index.php` and include the following code, replacing with your own image details:
+Finally, create a new file called `index.php` and include the following code, replacing the `src` and `alt` attributes with your own image details:
 
 ```html
 <h1>Hello World!</h1>
@@ -123,7 +123,7 @@ Finally, create a new file called `index.php` and include the following code, re
 
 After making these three changes, run `git status` to see the results.
 
-Now lets track these changes in Github.
+Now let's track these changes in Github.
 
 You can stage the files one at a time:
 
