@@ -63,7 +63,7 @@ On the screen that follows, make your Droplet settings match the following optio
 
 
 ## Log in to your new server droplet via SSH
-Once your Droplet is created, make note if its IP address:
+Once your Droplet is created, make note of its IP address:
 
 <img src='https://s3.amazonaws.com/making-the-internet/vc-do-new-ip-address@2x.png' style='max-width:835px; width:100%' alt='New IP address on Droplet'>
 

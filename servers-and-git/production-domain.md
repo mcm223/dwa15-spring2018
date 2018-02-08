@@ -14,7 +14,7 @@ If you're already comfortable with another domain provider you can use that but 
 
 Also, if you already own a domain you'd like to use, I only recommend doing so if you're comfortable configuring DNS settings&mdash; I don't want your practice in this course to interfere with any existing real-world sites.
  
-After you create your domain, find your **DNS settings** within your domain companies' control panel. In Namecheap, these settings are located by finding the domain you'd like to configure in your **Domain List** and then clicking **Manage**. Then, find the tab for **Advanced DNS**
+After you create your domain, find your **DNS settings** within your domain company's control panel. In Namecheap, these settings are located by finding the domain you'd like to configure in your **Domain List** and then clicking **Manage**. Then, find the tab for **Advanced DNS**.
 
 There are two separate records you'll want to configure in your DNS settings. The following is a screenshot of what you're aiming for, with explanation below.
 

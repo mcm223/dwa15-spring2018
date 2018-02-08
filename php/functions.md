@@ -28,7 +28,7 @@ Observations:
     * Function names should start with a letter or underscore, followed by any number of letters, numbers, or underscores.
     * In this course, our convention is to use `lowerCamelCase` function names.
 * Parameters
-    * Functions can accepts 0 or more parameters, separated by commas (this example accepts 2).
+    * Functions can accept 0 or more parameters, separated by commas (this example accepts 2).
     * A default argument can be assigned (`$includeUnit = true`).
     * Parameters can be type hinted (`int $temperature`), requiring arguments for that parameter to match the specified type.
 * The body of a function is encapsulated in curly brackets and indented.
