@@ -156,4 +156,4 @@ On the flipside, this design can result in more complex code because you have to
 Beyond text inputs (shown in the examples above), your project may also require checkboxes, radios, or dropdown selects. Examples of each can be seen at the following urls.
 
 + Examples: <http://php.dwa15.com/form-inputs>
-+ Code for examples: <https://github.com/susanBuck/dwa15-php/tree/master/form-inputs>
++ Code for examples: <https://github.com/susanBuck/dwa15-php/tree/master/forms-inputs>
