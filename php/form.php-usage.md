@@ -45,6 +45,14 @@ Extract a value from the request:
 $email = $form->get('email');
 ```
 
+If the value does not exist in the request, this method will return `null`. 
+
+Optionally, you can provide a second parameter to use as a default if the value does not exist, e.g.:
+
+```php
+$country = $form->get('country', 'USA');
+```
+
 Determine if a value is present in the request:
 ```php
 $email = $form->has('email');
