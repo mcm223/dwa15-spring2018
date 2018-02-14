@@ -50,9 +50,9 @@ A class file is structured like this:
 <?php
 class Book {
 
-	# Properties
+    # Properties
 
-	# Methods
+    # Methods
 }
 ```
 
@@ -83,10 +83,10 @@ $book = new Book();
 + `$this` is a built-in variable that is a reference to the current object's methods and properties.
 + `public` is an example of an **access modifier** which controls where an object's method can be accessed from.
 + Access modifier options:
-	 + **public** : method is accessible inside and outside the object
-	 + **private** : method is only accessible inside the object
-	 + **protected** : method is accessible inside the object and any objects which inherit this object
-	 + **static** : no object instantiation is needed; can be called directly on the class. This modifier can be added in addition to the `public`, `private` or `protected` modifiers. For example, you can say: `public static foobar() {}` to declare that a method is both `static` *and* `public`.
+    + **public** : method is accessible inside and outside the object
+    + **private** : method is only accessible inside the object
+    + **protected** : method is accessible inside the object and any objects which inherit this object
+    + **static** : no object instantiation is needed; can be called directly on the class. This modifier can be added in addition to the `public`, `private` or `protected` modifiers. For example, you can say: `public static foobar() {}` to declare that a method is both `static` *and* `public`.
 
 
 ## Magic Methods
@@ -97,18 +97,14 @@ For example, your class can have a `__construct()` magic method. What makes this
 ```php
 class Book {
 
-	# [...properties redacted...]
+    # [...properties redacted...]
 
-	/**
-	*
-	*/
-	function __construct($title)
+    function __construct($title)
     {
-		$this->title = $title;
-	}
+        $this->title = $title;
+    }
 
-	# [...other methods redacted...]
-
+    # [...other methods redacted...]
 }
 ```
 
