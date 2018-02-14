@@ -96,7 +96,7 @@ Available validation rules:
 Example of how you might output the errors in your display file:
 
 ```html 
- <?php if (isset($errors)) : ?>
+ <?php if ($form->hasErrors) : ?>
      <div class='alert alert-danger'>
          <ul>
              <?php foreach ($errors as $error) : ?>
