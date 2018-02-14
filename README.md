@@ -51,6 +51,11 @@ If you have a suggestion regarding a particular topic (correction, typo, etc.), 
     + [Loops](/php/loops.md)
     + [Forms](/php/forms.md)
     + [Form security](/php/form-security.md)
+    + [OOP](/php/oop.md)
+    + [Validation](/php/validation.md)
+    + [Using Form.php](/php/form.php-usage.md)
     + Extras
         + [Random quote tips (P1)](/php/random-quote-tips.md)
+        + [Garbage collection](/php/garbage-collection.md)
+        + [Extending Form.php](/php/form.php-extending.md)
 + Laravel
