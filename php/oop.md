@@ -35,8 +35,9 @@ If a class is a cookie-cutter, the object is the cookie.
 In lecture, we'll look at three different example classes:
 
 1. [`Cipher`](https://github.com/susanBuck/dwa15-php/tree/master/cipher) - a class that mimics the kind of work you may do in Project 2
-2. [`Form`](https://github.com/susanBuck/dwa15-php/blob/master/includes/Form.php) - a class to help with working with forms, including validation methods
 2. [`Book`](https://github.com/susanBuck/foobooks0/blob/master/Book.php) - a class to help organize our foobooks0 work thus far
+3. [`Form`](https://github.com/susanBuck/dwa15-php/blob/master/includes/Form.php) - a class to help with working with forms, including validation methods
+
 
 
 ## The basics
