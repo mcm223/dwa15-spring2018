@@ -14,7 +14,9 @@ In this case, I've defined a new `numeric` function that will overwrite the `num
 
 namespace Buck; # Choose your own namespace for this class. Could be your last name, your app name, etc.
 
-class MyForm extends DWA\Form
+use DWA\Form; # Use statement here will allow us to extend Form below
+
+class MyForm extends Form
 {
 
     /**
@@ -38,10 +40,16 @@ Update your logic file so that it includes your new form class (`MyForm`) and in
 
 ```php
 <?php
-require('Form.php');
+require('Form.php'); # <--- Still need this because MyForm.php will extend it
 require('MyForm.php'); # <--- NEW
 
-$form = new Buck\MyForm($_GET); # <--- CHANGED
+use Foobooks0\Book;
+
+#use DWA\Form; # <--- REMOVE
+use Buck\MyForm; # <--- NEW
+
+#$form = new Form($_GET); # <--- REMOVE
+$form = new MyForm($_GET); # <--- NEW
 
 if ($form->isSubmitted()) {
     $errors = $form->validate(
