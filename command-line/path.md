@@ -21,13 +21,9 @@ One way to add new paths to your PATH variable is to add them in the `/etc/paths
 
 Let's use an example scenario of adding the PHP executable that comes with MAMP to your PATH. This will make it so that when you run the command `php` from command line, it will use MAMP's PHP executable.
 
-This semester, the version of PHP we're using with MAMP is `php7.1.6`:
+This semester, the version of PHP we're using with MAMP is **php7.2.1**. (We started with *7.1.12*, but changes in the software we're using necessitates an upgrade- [more details here on how to upgrade.](https://github.com/susanBuck/dwa15-spring2018/issues/12))
 
-<img src='http://making-the-internet.s3.amazonaws.com/sysadmin-identify-latest-version-of-php-in-mamp@2x.png' style='max-width:538px'>
-
-If you dig into the MAMP folder contents on your computer, you can find a PHP executable in `/Applications/MAMP/bin/php/php7.1.6/bin`, so that's the path we want to add.
-
-<img src='http://making-the-internet.s3.amazonaws.com/sysadmin-finding-php-in-mamp@2x.png' style='max-width:1433; width:100%' alt='Finding PHP in MAMP'>
+Given this, we'll use the php7.2.1 executable that comes with MAMP and is located in the directory `/Applications/MAMP/bin/php/php7.2.1/bin`.
 
 Using Nano and the `sudo` command, open `/etc/paths`:
 
@@ -38,25 +34,26 @@ $ sudo nano /etc/paths
 At the **top** of `/etc/paths`, add this line:
 
 ```xml
-/Applications/MAMP/bin/php/php7.1.6/bin
+/Applications/MAMP/bin/php/php7.2.1/bin
 ```
 
-<img src='http://making-the-internet.s3.amazonaws.com/sysadmin-append-to-paths@2x.png' style='max-width:803px; width:100%' alt=''>
+<img src='https://s3.amazonaws.com/making-the-internet/sysadmin-append-to-paths@2x.png' style='max-width:732px;' alt=''>
+
 
 Save your changes (`ctrl` + `x`, then `y`, then *Enter*).
 
-Close and restart Terminal. (This step is important! If you don't do this, your changes won't take effect)
+**Close and restart Terminal.** (This step is important! If you don't do this, your changes won't take effect)
 
 Test it out:
 
 ```bash
 $ which php
-/Applications/MAMP/bin/php/php7.1.6/bin/php
+/Applications/MAMP/bin/php/php7.2.1/bin/php
 ```
 
 ```bash
 $ php -v
-PHP 7.1.6 (cli) (built: Jul  3 2017 15:25:20) ( NTS )
+PHP 7.2.1 (cli) (built: Jul  3 2017 15:25:20) ( NTS )
 Copyright (c) 1997-2017 The PHP Group
 Zend Engine v3.1.0, Copyright (c) 1998-2017 Zend Technologies
 ```

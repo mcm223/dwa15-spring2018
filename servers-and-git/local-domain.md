@@ -1,3 +1,5 @@
+# Local domain
+
 So far, you've created a new application called `hello-world` that exists as a copy on Github.com and also your local machine. Now let's look at how you'll actually run/preview this application via your local server.
 
 In Week 1, we accessed our local server by visiting `http://localhost` which loaded the contents of our `htdocs` folder since that's what the document root was configured to.
