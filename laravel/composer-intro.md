@@ -52,7 +52,7 @@ Instead, you can provide a map for your application where it will look for class
 
 With autoloading, you no longer have to do something like this:
 ```php
-include('Form.php');
+require 'Form.php';
 
 use DWA\Form;
 $form = new Form;

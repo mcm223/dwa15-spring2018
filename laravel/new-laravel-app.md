@@ -52,8 +52,15 @@ We'll talk specifically about setting permissions on DigitalOcean when we get to
 ## Point local server to your new app
 The initial setup for your app is complete so the next step is to configure a local domain so you can access this app in the browser.
 
-To do this, you'll create a new VirtualHost block in your `httpd-vhosts.conf` file as described in [these notes](/servers-and-git/local-domain.md).
+You'll recall from [the notes on creating local domains](/servers-and-git/local-domain.md) that this is a 2 step process:
 
+__Step 1. Create a new local domain mapping in your computer's hosts file__
+
+```xml
+127.0.0.1 foobooks.loc
+```
+
+__Step 2. Create a new VirtualHost block__ in your server's `httpd-vhosts.conf` file.
 Here's an example VirtualHost block (example shown using Windows paths; Mac users adjust the path as needed, e.g. `/Applications/MAMP/htdocs/foobooks/public`):
 
 ```xml
