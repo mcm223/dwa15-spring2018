@@ -82,7 +82,7 @@ Files that the browser does need access to (such as images, .css/.js files, etc.
 
 __After saving your changes and restarting your server__, you should be able to load your application in the browser and see Laravel's default welcome page.
 
-<img src='http://making-the-internet.s3.amazonaws.com/laravel-app-setup-success@2x.png' style='max-width:686px; width:100%'>
+<img src='https://s3.amazonaws.com/making-the-internet/laravel-app-setup-success@2x.png' style='max-width:394px'>
 
 
 ## Create a README.md file
