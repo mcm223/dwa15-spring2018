@@ -85,6 +85,14 @@ __After saving your changes and restarting your server__, you should be able to 
 <img src='http://making-the-internet.s3.amazonaws.com/laravel-app-setup-success@2x.png' style='max-width:686px; width:100%'>
 
 
+## Create a README.md file
+```
+# Practice work
++ By: *your first and last name*
++ Production URL: <http://foobooks.yourdomain.com>
+```
+
+
 ## Version Control your new app
 In this course, you've created three applications so far:
 
