@@ -1,3 +1,5 @@
+# Preface 
+
 ## What we've done so far - &ldquo;from scratch&rdquo; PHP
 
 + Distinguishing between logic and display code
