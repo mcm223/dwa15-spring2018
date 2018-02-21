@@ -20,6 +20,7 @@ If you have a suggestion regarding a particular topic (correction, typo, etc.), 
     + [Text editing with Nano](/command-line/nano.md)
     + Extras
         + [Permissions](/command-line/permissions.md)
+        + [PATH variables](/command-line/path.md)
 + Servers and Git
     + [Intro](/servers-and-git/intro.md)
     + [Local server setup](/servers-and-git/local-server-setup.md)
@@ -60,3 +61,11 @@ If you have a suggestion regarding a particular topic (correction, typo, etc.), 
         + [Garbage collection](/php/garbage-collection.md)
         + [Extending Form.php](/php/form.php-extending.md)
 + Laravel
+    + [Preface](/laravel/preface.md)
+    + [Frameworks intro](/laravel/frameworks-intro.md)
+    + [Composer intro](/laravel/composer-intro.md)
+    + [Composer setup Mac](/laravel/composer-mac.md)
+    + [Composer setup Windows](/laravel/composer-windows.md)
+    + [New Laravel application](/laravel/new-laravel-app.md)
+    + [Prep DigitalOcean for Laravel](/laravel/prep-digital-ocean-for-laravel.md)
+    + [Deploy to DigitalOcean](/laravel/deploy-to-digital-ocean.md)
