@@ -80,7 +80,7 @@ Note how the DocumentRoot/Directory is set not just to `[...]/foobooks/`, but `[
 
 Files that the browser does need access to (such as images, .css/.js files, etc.) will be stored in `public/`
 
-After saving your changes and restarting your server, you should be able to load your application in the browser and see Laravel's default welcome page.
+__After saving your changes and restarting your server__, you should be able to load your application in the browser and see Laravel's default welcome page.
 
 <img src='http://making-the-internet.s3.amazonaws.com/laravel-app-setup-success@2x.png' style='max-width:686px; width:100%'>
 
