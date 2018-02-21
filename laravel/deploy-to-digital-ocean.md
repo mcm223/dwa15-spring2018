@@ -88,15 +88,17 @@ To do this, we first identified that on DigitalOcean servers, Apache runs under 
 Given that, make the user `www-data` own the `storage` directory and everything in it (`-R`):
 
 ```xml
-$ sudo chown -R www-data storage
+$ chown -R www-data storage
 ```
 
 And now do the same two steps for the `bootstrap/cache` directory:
 ```xml
-$ sudo chown -R www-data bootstrap/cache
+$ chown -R www-data bootstrap/cache
 ```
 
-Ref: [SuperUser: Setting correct permissions for uploading files](http://superuser.com/a/581259/84723)
+Ref:
++ [SuperUser: Setting correct permissions for uploading files](http://superuser.com/a/581259/84723)
++ [Command Line : Extras : Permissions](/command-line/permissions.md)
 
 
 ## Set up .env file on production

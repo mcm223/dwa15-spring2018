@@ -146,7 +146,7 @@ $ service apache2 restart
 When you're done, you can confirm PHP command line is running the correct version:
 
 ```xml
-$ php --version
+$ php -v
 PHP 7.2.2-3+ubuntu16.04.1+deb.sury.org+1 (cli) (built: Feb  6 2018 16:11:23) ( NTS )
 Copyright (c) 1997-2018 The PHP Group
 Zend Engine v3.2.0, Copyright (c) 1998-2018 Zend Technologies
