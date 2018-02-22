@@ -91,7 +91,7 @@ Given that, make the user `www-data` own the `storage` directory and everything 
 $ chown -R www-data storage
 ```
 
-And now do the same two steps for the `bootstrap/cache` directory:
+And now make the same change for the `bootstrap/cache` directory:
 ```xml
 $ chown -R www-data bootstrap/cache
 ```
