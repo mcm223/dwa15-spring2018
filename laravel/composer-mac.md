@@ -54,7 +54,7 @@ Move into your `/usr/local/bin` directory. This is a common location to put comm
 $ sudo cd /usr/local/bin
 ```
 
-Note: On some versions of OSX the `/usr` directory does not exist by default. If you receive the error */usr/local/bin/composer: No such file or directory* then you must create the directory manually using this command
+Note: On some versions of OSX the `/usr` directory does not exist by default. If you receive the error */usr/local/bin: No such file or directory* then you must create the directory manually using this command
 ```bash
 sudo mkdir -p /usr/local/bin
 ```
