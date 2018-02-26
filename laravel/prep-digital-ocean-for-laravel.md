@@ -133,7 +133,7 @@ Tell Apache to disable the older version of PHP:
 $ sudo a2dismod php7.0
 ```
 
-And enable PHP 7.1:
+And enable PHP 7.2:
 ```
 $ sudo a2enmod php7.2
 ```
