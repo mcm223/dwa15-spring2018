@@ -117,8 +117,8 @@ Clear out this `welcome.blade.php` file and replace it with the following:
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	<meta charset='utf-8'>
+    <title></title>
+    <meta charset='utf-8'>
 </head>
 <body>
     <h1>Foobooks</h1>
@@ -149,12 +149,12 @@ Route::get('/', function () {
 ```
 
 Save your work then test it out by visiting `http://foobooks.loc/example`; you should see this:
-<img src='http://making-the-internet.s3.amazonaws.com/laravel-example-route@2x.png' style='max-width:756px;' alt=''>
+<img src='https://s3.amazonaws.com/making-the-internet/laravel-example-route@2x.png' style='max-width:756px;' alt=''>
 
 
 ## Example 3: Test a non-existent route
 Observe what happens when you visit a route that has not be defined, for example, http://foobooks.loc/xyz.
-<img src='http://making-the-internet.s3.amazonaws.com/laravel-route-not-found@2x.png' style='max-width:1055px;' alt=''>
+<img src='https://s3.amazonaws.com/making-the-internet//laravel-route-not-found@2x.png' style='max-width:1055px;' alt=''>
 
 
 
