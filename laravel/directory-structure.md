@@ -8,9 +8,10 @@ Most frequently used files/directories:
 | `/resources/views/` | Where all your **views** go |
 | `/app/Http/Controllers` | Where all your **controllers** go |
 | `/config/` | Where all your configurations are set |
+| `/public/` | Where front-end assets (images, js, css) go; the only directory the browser has access to |
 | `/.env` | Where configurations that are specific to the *current* environment are set |
 | `/composer.json` | Composer config file - Where you manage what dependencies your application has |
 
-Learn more: [Laravel Docs: Directory Structure](https://laravel.com/docs/5.4/structure)
+Learn more: [Laravel Docs: Directory Structure](https://laravel.com/docs/structure)
 
-Remember that [PhpStorm's **Search Everywhere** tool can be invoked by hitting Shift twice](https://github.com/susanBuck/dwa15-spring2018/blob/master/misc/phpstorm.md#keymaps). This feature can help minimize the overwhelming nature of all the dirs/files in a framework like Laravel. 
+Remember that [PhpStorm's **Search Everywhere** tool can be invoked by hitting Shift twice](/misc/phpstorm.md#keymaps). This feature can help minimize the overwhelming nature of all the dirs/files in a framework like Laravel. 
