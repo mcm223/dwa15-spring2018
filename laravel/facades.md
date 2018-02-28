@@ -9,13 +9,13 @@ Route::get('/', function () {
 
 Before proceeding, let's take a moment to focus on the `Route::get` syntax because you'll see it used frequently throughout Laravel...
 
-First, we need to address an aspect of [Classes](/php/oop.md) which was not discussed earlier, and that's [__static methods__](http://php.net/manual/en/language.oop5.static.php).
+First, we need to address an aspect of [object oriented programming](/php/oop.md) which was not discussed earlier, and that's [__static methods__](http://php.net/manual/en/language.oop5.static.php).
 
 __When a method is declared as static, it is accessible without needing an instantiation of the class.__
 
 For example, imagine we had a class called `Email` with a method called `send`.
 
-```
+```php
 class Email {
     public function send() 
     {
@@ -25,14 +25,15 @@ class Email {
 ```
 
 As written, in order to invoke `send`, we'd first have to instantiate a new email object:
-```
+
+```php
 $email = new Email();
 $email->send();
 ```
 
 However, if the `send` method was modified to indicate it was `static`...
 
-```
+```php
 class Email {
     public static function send() 
     {
@@ -43,7 +44,7 @@ class Email {
 
 ...we could then invoke the send method directly from the class using this double colon syntax:
 
-```
+```php
 Email::send();
 ```
 

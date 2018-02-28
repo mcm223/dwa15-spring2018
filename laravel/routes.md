@@ -60,19 +60,15 @@ To demonstrate this, replace the above /book route with this updated version:
 
 ```php
 Route::get('/books/{title?}', function($title = '') {
-
-    if($title == '') {
+    if ($title == '') {
         return 'Your request did not include a title.';
+    } else {
+        return 'Results for the book: '.$title;
     }
-    else {
-	    return 'Results for the book: '.$title;
-    }
-
 });
 ```
 
 Again visit the URL omitting the title, `http://foobooks.loc/books/`, and note the difference.
-
 
 
 ## Artisan routes
@@ -93,8 +89,8 @@ Example output:
 +--------+----------+---------------+------+---------+--------------+
 |        | GET|HEAD | /             |      | Closure | web          |
 |        | GET|HEAD | api/user      |      | Closure | api,auth:api |
-|        | GET|HEAD | books/{title?} |     | Closure | web          |
 |        | GET|HEAD | books         |      | Closure | web          |
+|        | GET|HEAD | books/{title} |      | Closure | web          |
 +--------+----------+---------------+------+---------+--------------+
 ```
 
