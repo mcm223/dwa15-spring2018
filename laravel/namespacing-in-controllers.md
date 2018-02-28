@@ -20,7 +20,7 @@ public function index() {
 
 Testing the above action would show this error:
 
-<img src='http://making-the-internet.s3.amazonaws.com/laravel-app-class-not-found-in-controller@2x.png' style='max-width:900px;' alt=''>
+<img src='https://s3.amazonaws.com/making-the-internet/laravel-in-controller-namespace@2x.png' style='max-width:1063px;' alt='Class not found'>
 
 The reason the `App::environment()` statement works in the `web.php` routes file is because that file is in the __global namespace__.
 
