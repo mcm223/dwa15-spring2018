@@ -23,13 +23,13 @@ First, locate and open `httpd.conf`, your local server's Apache configuration fi
 In the `httpd.conf` file, make sure the line including `httpd-vhosts.conf` is *not* commented out by removing the pound sign from the start of the `Include` (if there is one):
 
 Mac:
-```txt
+```xml
 # Virtual hosts
 Include /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf
 ```
 
 Windows:
-```txt
+```xml
 # Virtual hosts
 Include conf/extra/httpd-vhosts.conf
 ```
@@ -54,7 +54,7 @@ $ elevate nano c:\xampp\apache\conf\extra\httpd-vhosts.conf
 At the __bottom__ of this file, add your own VirtualHost block:
 
 Mac/MAMP users, yours will look like this:
-```txt
+```xml
 <VirtualHost *:80>
     ServerName hello-world.loc
     DocumentRoot /Applications/MAMP/htdocs/hello-world
@@ -69,7 +69,7 @@ Mac/MAMP users, yours will look like this:
 
 Windows/XAMPP users, yours will look like this. (The details of this example are different from the example VirtualHosts you'll see commented-out in xampp's httpd-vhosts.conf; that's okay.)
 
-```txt
+```xml
 <VirtualHost *:80>
     ServerName hello-world.loc
     DocumentRoot C:/xampp/htdocs/hello-world
@@ -114,7 +114,7 @@ $ elevate nano c:\Windows\System32\drivers\etc\hosts
 
 At the bottom of your hosts file, add a new host:
 
-```txt
+```xml
 127.0.0.1 hello-world.loc
 ```
 
@@ -135,7 +135,7 @@ After you make the above change you'll notice that `http://localhost` no longer 
 To fix this, you can add a VirtualHost block specifically for `http://localhost`. I recommend having localhost just point to your htdocs folder.
 
 For Mac/MAMP users:
-```txt
+```xml
 <VirtualHost *:80>
     ServerName localhost
     DocumentRoot /Applications/MAMP/htdocs
@@ -149,7 +149,7 @@ For Mac/MAMP users:
 ```
 
 For Win/XAMPP users:
-```txt
+```xml
 <VirtualHost *:80>
     ServerName localhost
     DocumentRoot c:\xampp\htdocs
