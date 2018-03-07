@@ -77,3 +77,11 @@ If you have a suggestion regarding a particular topic (correction, typo, etc.), 
     + [Controllers](/laravel/controllers.md)
     + [Namespacing](/laravel/namespacing.md)
     + [Namespacing in Controllers](/laravel/namespacing-in-controllers.md)
+    + [Configurations & Environments](/laravel/config-and-environments.md)
+    + [Packages intro](/laravel/packages-intro.md)
+    + [Package examples](/laravel/packages-examples.md)
+    + [Views & Blade](/laravel/views-and-blade.md)
+    + [Blade templates](/laravel/blade-templates.md)
+    + Extras
+        + [Practice work](/laravel/practice-work.md)
+        + [Blade cheat sheet](/laravel/blade-cheat-sheet.md)
