@@ -3,9 +3,9 @@
 ## Configurations
 When building an application, it's helpful to have a configuration system that allows you to specify settings to be used throughout your application.
 
-For insight into the kind of configurations an app uses, browse the files in the `/config` folder in your Laravel app.
+For insight into the kind of configurations an app uses, skim through the files in the `/config` folder in your Laravel app. Note how each file contains an array of configuration values.
 
-Note how each file contains an array of configuration values.
+<img src='https://s3.amazonaws.com/making-the-internet/laravel-config-files@2x.png' style='max-width:202px;' alt='Laravel config files'>
 
 These values are accessible throughout your application using Laravel's `config` helper.
 
@@ -59,7 +59,7 @@ On the flip side, you also have your application running on a live server, which
 
 + Turn off all error reporting to the page
 + Connect to a live database
-+ Send outgoing mail using a service like [SendGrid](https://sendgrid.com/)
++ Send outgoing mail using a service like [MailGun](https://www.mailgun.com)
 
 **local** and **production** are the two most common environments, but you may have other ones like **staging**, **testing**, or more.
 
@@ -97,19 +97,20 @@ Here we see the [env](https://laravel.com/docs/helpers#method-env) helper functi
 1. Environment-specific variable you're looking for (in this case, `APP_DEBUG`)
 2. What default value to use if that variable does not exist (in this case, `false`)
 
-Environment-specific variables are set in `.env` files at the root of your project.
-
-Here's a snapshot of the default `.env` file you will have:
+Environment-specific variables are set in `.env` files at the root of your project. This file contains a series of key value pairs like so:
 
 ```xml
 APP_ENV=local
-APP_KEY=[your unique key will be here]
+APP_KEY=base64:4/cxKRroiQ62kyW8zJgVDeJ2jbZaz1heYSrXWLV3LRM=
 APP_DEBUG=true
-APP_LOG_LEVEL=debug
-APP_URL=http://localhost
+APP_URL=http://foobooks.loc
 
 [...]
 ```
+
+Convention calls for each key to be written using the same style [PHP constants](http://php.net/manual/en/language.constants.php) use&mdash; `UPPER_CAMEL_CASE`:
+
+>> A constant is an identifier (name) for a simple value. As the name suggests, that value cannot change during the execution of the script [...]. A constant is case-sensitive by default. By convention, constant identifiers are always uppercase. [-ref](http://php.net/manual/en/language.constants.php) 
 
 Notice the third variable, `APP_DEBUG`, is set to `true`.
 
@@ -119,14 +120,15 @@ And so, revisiting this line in your app config...
 'debug' => env('APP_DEBUG', false),
 ```
 
-...we can conclude that when the application is running in the **local** environment, app debugging will be on (true).
+...we can conclude that when the application is running in the **local** environment, app debugging will be on (`true`).
 
+*If* `APP_DEBUG` was not defined in the .env file where the application is running, it would default to `false`.
 
 **Because the `.env` file is not tracked via git, it's possible that `APP_DEBUG` can be set to different values in different contexts (e.g. local v.s production).**
 
 
 ## Consistent configurations
-Not all configurations use the env helper method, for example in `/config/app.php` timezone is &ldquo;hardcoded&rdquo; as `UTC`:
+Not all configurations use the env helper method, for example in `/config/session.php` the config `encrypt` is &ldquo;hardcoded&rdquo; to `false`:
 
 ```
 'encrypt' => false,
@@ -149,18 +151,14 @@ In addition to examining your configuration files, you can see what specific con
 For example:
 
 ```php
-# Echo out what the mail => driver config is set to
 echo config('mail.driver');
 
 # Dump *all* of the mail configs
 dump(config('mail'));
 ```
 
-Aside: [Where to quickly test lines of code like this](/laravel/practice-work.md)
-
 
 ## What's my current environment?
-
 You can find out the environment your application is currently running in using the Artisan `env` command.
 
 ```bash
@@ -173,40 +171,3 @@ Or you can output the environment using the App facade's `environment` method:
 ```php
 dump(App::environment());
 ```
-
-
-
-
-## Production environment
-SSH into your DigitalOcean production server and locate the `.env` file at the root of your foobooks example project.
-
-The top of this file should look something like this:
-
-```xml
-APP_ENV=local
-APP_KEY=[your unique key will be here]
-APP_DEBUG=true
-APP_LOG_LEVEL=debug
-APP_URL=http://localhost
-
-[...]
-```
-
-Edit it changing...
-
-1. `APP_ENV` to `production`
-2. `APP_DEBUG` to `false` (We don't want debugging enabled on the production server)
-3. `APP_URL` to whatever domain you're using to run foobooks, e.g. `http://foobooks.yourdomain.com`
-
-Example post edits:
-```xml
-APP_ENV=production
-APP_KEY=[your unique key will be here]
-APP_DEBUG=false
-APP_LOG_LEVEL=debug
-APP_URL=http://foobooks.dwa15.me
-
-[...]
-```
-
-Save your changes to complete this configuration.
