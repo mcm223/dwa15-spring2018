@@ -144,6 +144,17 @@ However, if there is some reason you need to do just that, just edit the line to
 
 Now `encrypt` it will default to `false` but you have the option of overwriting it by setting `SESSION_ENCRYPT` in an environment's `.env` file.
 
+## Production .env
+Applying the above information, you should open the `.env` files on your production server for each application you're building to make sure appropriate values are set. Specifically `APP_ENV` should be set to `production` and `APP_DEBUG` should be set to `false`. The `APP_URL` should also match whatever address you're using to access your work on production.
+
+Here's an example taken from foobook's production `.env` file:
+```xml
+APP_ENV=production
+APP_KEY=[your-unique-key-will-be-here]
+APP_DEBUG=false
+APP_URL=http://foobooks.dwa15.me
+```
+
 
 ## Reading configurations
 In addition to examining your configuration files, you can see what specific configs are set to using the the global `config` helper function.
