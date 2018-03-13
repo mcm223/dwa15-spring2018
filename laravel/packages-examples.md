@@ -80,6 +80,18 @@ Better yet, you can add the following code to the `scripts` section in `composer
 ]
 ```
 
+### Debugbar should not run on production
+We don't want to run Debugbar on production which is why it was installed in the `require-dev` section of your `composer.json` file.
+
+To make sure Debugbar is not installed on production, remember that you should be using the `--no-dev` flag when invoking composer on production: `composer install --no-dev`.
+
+Also, make sure that your `.env` file on production has the appropriate settings for `APP_ENV` and `APP_DEBUG`:
+
+```
+APP_ENV=production
+APP_DEBUG=false
+```
+
 
 ## ianlchapman/pig-latin-translator
 
