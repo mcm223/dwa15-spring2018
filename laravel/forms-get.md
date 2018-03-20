@@ -222,7 +222,7 @@ In `search.blade.php`, right after the form, add this code:
             <div class='book'>
                 <h3>{{ $title }}</h3>
                 <h4>by {{ $book['author'] }}</h4>
-                <img src='{{ $book['cover'] }}'>
+                <img src='{{ $book['cover_url'] }}'>
             </div>
         @endforeach
     @endif
