@@ -1,30 +1,24 @@
 # Cookies and sessions
 
-## Preface
-Cookies and sessions are a fundamental part of how web sites work, so it's important to have some background info now, as we're covering all the essentials.
-
-That being said, **your Project 2 does not need to use cookies or sessions.** We will use cookies and sessions later in the semester; right now, we just want a broad idea of how they work.
-
 ## Application memory
-In a traditional stand-alone application, there's a memory system in place that is used to store and retrieve data as long as the application is running.
+In a traditional desktop or stand-alone application, there's a memory system in place that is used to store and retrieve data as long as the application is running.
 
-With web applications, our applications are effectively run every time the page loads, so we need some mechanism to store data between runs, i.e. between requests.
+With web applications, however, our applications are cycled every time the page loads, so we need some mechanism to store data between runs, i.e. between requests.
 
 Example use case: remembering logged in users as they browse different pages on your application.
 
 Retaining data between requests can be accomplished with cookies and sessions.
 
-__Cookies__ are small text payloads made up of a key,value pair that are stored in a user's browser.
-+ Servers can both set and retrieve cookies on a visitor's browser.
+__Cookies__ 
++ Small text payloads made up of a key,value pair that is stored in a visitor's browser
++ Servers can both set and retrieve cookies
 + Cookies are domain specific&mdash; a server/site can only access cookies that it created.
 
-__Sessions__ are also small text payloads made up of key,value pairs, but instead of being stored on the user's browser, they're stored on the site's server.
+__Sessions__ 
++ Also small text payloads made up of key,value pairs, but instead of being stored on the user's browser, they're stored on the server
++ Sessions can be stored in a variety of ways on the server, such as in plain text files, or in a database
 
-+ Sessions can be stored in a variety of ways on the server, such as in plain text files, or in a database.
-
-Cookies and sessions are used, in combination, to recall information as a visitor uses your site.
-
-Example:
+Cookies and sessions are used, in combination, to recall information as a visitor uses your site. Example:
 
 Visitor logs in...
 + a *session* is created on the server; it contains the user's id (used to query all the info about that user from the database)

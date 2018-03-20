@@ -61,6 +61,7 @@ If you have a suggestion regarding a particular topic (correction, typo, etc.), 
         + [Random quote tips (P1)](/php/random-quote-tips.md)
         + [Garbage collection](/php/garbage-collection.md)
         + [Extending Form.php](/php/form.php-extending.md)
+        + [Cookies & Sessions](/php/cookies-and-sessions.md)
 + Laravel
     + [Preface](/laravel/preface.md)
     + [Frameworks intro](/laravel/frameworks-intro.md)
@@ -83,6 +84,9 @@ If you have a suggestion regarding a particular topic (correction, typo, etc.), 
     + [Package examples](/laravel/packages-examples.md)
     + [Views & Blade](/laravel/views-and-blade.md)
     + [Blade templates](/laravel/blade-templates.md)
+    + [Forms GET](/laravel/forms-get.md)
+    + [Forms POST](/laravel/forms-post.md)
+    + [Validation](/laravel/validation.md)
     + Extras
         + [Practice work](/laravel/practice-work.md)
         + [Blade cheat sheet](/laravel/blade-cheat-sheet.md)
