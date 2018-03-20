@@ -233,7 +233,7 @@ In `search.blade.php`, right after the form, add this code:
 ## Finishing touches: Retain data in inputs
 To retain the data in your form inputs after submission, update the `value` attribute of your `searchTerm` input to look like this:
 ```html
-<input type='text' name='searchTerm' id='searchTerm' value='{{ $searchTerm or '' }}'>
+<input type='text' name='searchTerm' id='searchTerm' value='{{ $searchTerm }}'>
 ```
 
 And update your `caseSensitive` checkbox to look like this:
