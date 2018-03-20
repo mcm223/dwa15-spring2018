@@ -243,7 +243,7 @@ And update your `caseSensitive` checkbox to look like this:
 
 
 ## Sanitizing output
-Note that no where in the above examples did I explicitly escape any visitor-entered form data before printing it to the page.
+Note that no where in the above examples did I explicitly sanitize/escape any visitor-entered form data before printing it to the page.
 
 This is because Blade takes care of this for us when using the [`{{ }}` echo shortcuts](https://laravel.com/docs/blade#displaying-data) which invoke Laravel's [`e` (escape) helper method](https://laravel.com/docs/helpers#method-e).
 
