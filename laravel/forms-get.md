@@ -222,7 +222,7 @@ In `search.blade.php`, right after the form, add this code:
             <div class='book'>
                 <h3>{{ $title }}</h3>
                 <h4>by {{ $book['author'] }}</h4>
-                <img src='{{ $book['cover_url'] }}'>
+                <img src='{{ $book['cover_url'] }}' alt='Cover image for the book {{ $title }}'>
             </div>
         @endforeach
     @endif
@@ -240,6 +240,13 @@ And update your `caseSensitive` checkbox to look like this:
 ```html
 <input type='checkbox' name='caseSensitive' {{ ($caseSensitive) ? 'CHECKED' : '' }} >
 ```
+
+
+## Sanitizing output
+Note that no where in the above examples did I explicitly escape any visitor-entered form data before printing it to the page.
+
+This is because Blade takes care of this for us when using the [`{{ }}` echo shortcuts](https://laravel.com/docs/blade#displaying-data) which invoke Laravel's [`e` (escape) helper method](https://laravel.com/docs/helpers#method-e).
+
 
 
 
