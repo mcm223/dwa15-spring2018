@@ -37,13 +37,15 @@ Next, create a new view that will display this form:
 
     <form method='GET' action='/books/search'>
 
-        <label for='searchTerm'>Search by title:</label>
-        <input type='text' name='searchTerm' id='searchTerm'>
+        <fieldset>
+            <label for='searchTerm'>Search by title:</label>
+            <input type='text' name='searchTerm' id='searchTerm'>
+    
+            <input type='checkbox' name='caseSensitive'>
+            <label>case sensitive</label>
+        </fieldset>
 
-        <input type='checkbox' name='caseSensitive'>
-        <label>case sensitive</label>
-
-        <input type='submit' class='btn btn-primary btn-small'>
+        <input type='submit' value='Search' class='btn btn-primary btn-small'>
 
     </form>
 @endsection
@@ -125,18 +127,16 @@ public function search(Request $request) {
     dump($request->has('publishedYear')); # There's no publishedYear input, so this should be false
 
     # You can get more information about a request than just the data of the form, for example...
-    dump($request->fullUrl());
-    dump($request->method());
-    dump($request->isMethod('post'));
+    dump($request->path()); # "books/search"
+    dump($request->is('books/search')); # True
+    dump($request->is('search')); # False
+    dump($request->fullUrl()); # http://foobooks.loc/books/search
+    dump($request->method()); # GET
+    dump($request->isMethod('post')); # False
 
     # ======== End exploration of $request ==========
 
-    # Return the view with some placeholder data we'll flesh out in a later step
-    return view('books.search')->with([
-        'searchTerm' => '',
-        'caseSensitive' => false,
-        'searchResults' => []
-    ]);
+    return view('books.search');
 }
 ```
 
