@@ -63,15 +63,12 @@ Cookies can be retrieved using PHP's [`$_COOKIE`](http://php.net/manual/en/reser
 dump($_COOKIE['recentSearch']);
 ```
 
-Knowing this...
-
 
 ### Example
-Update your `search.php` file with the following code:
+Here's some example code showing how we could utilize cookies in Foobooks0 to retain a visitor's search term: 
 
 ```php
 <?php
-
 require('helpers.php');
 
 if(isset($_COOKIE['recentSearch'])) {
@@ -81,10 +78,10 @@ else {
     $recentSearch = '';
 }
 
-setcookie('recentSearch', $_POST['searchTerm']);
+if(isset($_POST['searchTerm'])) {
+    setcookie('recentSearch', $_POST['searchTerm']);
+}
 
 dump('You recently searched for: '.$recentSearch);
 dump('You just searched for: '.$_POST['searchTerm']);
 ```
-
-Study the results by submitting your search form several times.
