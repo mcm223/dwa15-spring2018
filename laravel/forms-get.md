@@ -212,7 +212,7 @@ The final piece of the puzzle is to display the results of the request in the vi
 In `search.blade.php`, right after the form, add this code:
 
 ```html
-@if($searchTerm != null)
+@if($searchTerm)
     <h2>Results for query: <em>{{ $searchTerm }}</em></h2>
 
     @if(count($searchResults) == 0)
