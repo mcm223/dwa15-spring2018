@@ -35,7 +35,7 @@ Add *before* the `/books/{title?}` route.
 
 ```php
 Route::get('/books/create', 'BookController@create');
-Route::post('/book', 'BookController@store');
+Route::post('/books', 'BookController@store');
 ```
 
 ### Controller actions
