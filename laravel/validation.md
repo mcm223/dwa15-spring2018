@@ -11,8 +11,12 @@ To recap, our form for adding a new book looks like this:
 ```html
 <form method='POST' action='/books'>
     {{ csrf_field() }}
-    <label for='title'>Title</label>
-    <input type='text' name='title' id='title'>
+    
+    <fieldset>
+        <label for='title'>Title</label>
+        <input type='text' name='title' id='title'>
+    </fieldset>
+    
     <input type='submit' value='Add book'>
 </form>
 ```
@@ -103,12 +107,7 @@ Given this, you can display errors in your view like so:
 
 <h1>Add a new book</h1>
 
-<form method='POST' action='/books'>
-    {{ csrf_field() }}
-    <label for='title'>Title</label>
-    <input type='text' name='title' id='title'>
-    <input type='submit' value='Add book'>
-</form>
+{{-- Form to add book here --}}
 ```
 
 In the above example, we're using the `all` method on `$errors`, one of many methods available when dealing with the error MessageBag.
@@ -125,7 +124,7 @@ Alternatively, if we wanted *just* the errors related to the title field (assumi
 @endif
 ```
 
-Read the section on [Working with Error Messages](https://laravel.com/docs/validation#working-with-error-messages) to see more about the methods available to you in the `$error` MessageBag.
+Read the docs page [Working with Error Messages](https://laravel.com/docs/validation#working-with-error-messages) to see more about the methods available to you in the `$error` MessageBag.
 
 
 ## Available validation rules
@@ -133,9 +132,9 @@ In the above example, we only saw two rules: `required` and `min`. There are cur
 
 
 ## Retaining form data when validation fails
-When validation fails and the visitor is redirected back to the form, the form data from the request is stored on the server in something called a **Session**.
+When validation fails and the visitor is redirected back to the form, the form data from the request is stored on the server in something called a **session**.
 
-The form data can then be pulled out of the Session and used to re-fill the form inputs, retaining the visitor's data.
+The form data can then be pulled out of the session and used to re-fill the form inputs, retaining the visitor's data.
 
 This is done using a Laravel helper method called [`old`](https://laravel.com/docs/helpers#method-old).
 
