@@ -51,7 +51,7 @@ These are questions you might ask yourself when comparing packages:
 
 
 ## Learning more about a package
-When searching for packages on Packagst or Packalyst, you'll enter keywords for the kind of feature you're looking to add, for example you might type in &ldquo;image&rdquo; if you needed a package for basic image manipulation (cropping, resizing, etc.):
+When searching for packages on Packagist or Packalyst, you'll enter keywords for the kind of feature you're looking to add, for example you might type in &ldquo;image&rdquo; if you needed a package for basic image manipulation (cropping, resizing, etc.):
 
 <img src='http://making-the-internet.s3.amazonaws.com/laravel-searching-for-image-package@2x.png' style='max-width:823px; width:100%' alt=''>
 
