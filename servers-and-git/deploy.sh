@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 #
 # Customize the following for your project/server
@@ -17,7 +17,6 @@ info () {
     echo $(tput bold)$(tput setaf 4)$@ $(tput sgr 0)
 }
 
-
 # Function to handle git actions locally
 welcome () {
     echo ""
@@ -33,6 +32,7 @@ welcome () {
 
      case $choice in
         1)
+            git push origin master
             ssh -t $usernameServer "$docRoot/bash/deploy.sh"
             ;;
         2)
@@ -61,7 +61,12 @@ welcome () {
 deploy () {
     cd $docRoot;
     info "git pull origin master ---------------"
-    git pull origin master
+    haystack=$(git pull origin master)
+    needle="config"
+    if [[ "$haystack" == *"$needle"* ]]; then
+        info "Detected change in config directory, running artisan cache:clear"
+        php artisan cache:clear
+    fi
     line
     info "composer install --no-dev ------------"
     composer install --no-dev
