@@ -6,7 +6,7 @@ Databases are an essential component of most web applications as they provide a 
 Databases consist of **tables**.
 For example, the Foobooks app will need a *books* table, an *authors* table, a *tags* table, etc.
 
-Each table is like a spreadsheet, with **columns** describing the data that table is storing.
+Each table is [like a spreadsheet](https://docs.google.com/spreadsheets/d/1ydYBl7qSeKTRrplZNh4SeYF8p3SxNfa9R2h79eAPDYU/edit#gid=0), with **columns** describing the data that table is storing.
 For example, a *books* table would have columns like `title`, `author`, `published_year`, etc.
 
 Data is stored in the tables as **rows**.
