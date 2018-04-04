@@ -204,7 +204,7 @@ VALUES (
     'F. Scott Fitzgerald',
     '1925',
     'http://img2.imagesbn.com/p/9780743273565_p0_v4_s114x166.JPG',
-    'http://www.barnesandnoble.com/w/the-great-gatsby-francis-scott-fitzgerald/1116668135?ean=9780743273565',
+    'http://www.barnesandnoble.com/w/the-great-gatsby-francis-scott-fitzgerald/1116668135?ean=9780743273565'
     );
 ```
 
