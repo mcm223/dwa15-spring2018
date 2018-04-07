@@ -68,7 +68,7 @@ public function search()
 
 
 ### Step 4) Route
-Finally, create a route to point to this this method:
+Finally, create a route to point to this method:
 
 ```php
 # /routes/web.php
