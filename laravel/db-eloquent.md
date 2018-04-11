@@ -258,7 +258,7 @@ Similar to updating, when deleting a book, you have to first find the book you w
 
 ```php
 # First get a book to delete
-$book = Book::where('author', 'LIKE', '%Scott%')->first();
+$book = Book::where('author', '=', 'F. Scott Fitzgerald')->first();
 
 if (!$book) {
     dump('Did not delete- Book not found.');
@@ -282,7 +282,7 @@ Knowing that, here are some resources to study:
 
 Armed with this information, write queries to accomplish the following...
 
-+ Retrieve the last 5 books that were added to the `books` table.
++ Retrieve the last 2 books that were added to the `books` table.
 + Retrieve all the books published after 1950.
 + Retrieve all the books in alphabetical order by title.
 + Retrieve all the books in descending order according to published date.
