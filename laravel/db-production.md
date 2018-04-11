@@ -100,25 +100,12 @@ $ cd /var/www/html/foobooks/
 $ nano .env
 ```
 
-Your existing `DB` credentials will look something like this:
+In your .env file add the following configs:
 
-```xml
-DB_DATABASE=homestead
-DB_USERNAME=homestead
-DB_PASSWORD=secret
-```
-
-Update these configs, setting...
-
-+ `DB_DATABASE` to be `foobooks` (or whatever your project database name is)
-+ `DB_USERNAME` to be `root`
-+ `DB_PASSWORD` to be the same MySQL password you used in the above step.
-
-Example after edits (your password will be different):
 ```xml
 DB_DATABASE=foobooks
 DB_USERNAME=root
-DB_PASSWORD=9f15faddf3d4c9825fac6f22ab042ad4b47919ff063bd063
+DB_PASSWORD=[your mysql password goes here]
 ```
 
 When you're done updating your values, save your changes and exit nano (`ctrl + x`, then `y`, then *Enter*).
