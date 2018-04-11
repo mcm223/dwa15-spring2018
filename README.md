@@ -91,6 +91,12 @@ If you have a suggestion regarding a particular topic (correction, typo, etc.), 
         + [Primer](/laravel/db-primer.md)
         + [Local database configuration](/laravel/db-local-config.md)
         + [Migrations](/laravel/db-migrations.md)
+        + [CRUD: Create, Read, Update, Delete](/laravel/db-crud.md)
+        + [Eloquent](/laravel/db-eloquent.md)
+        + [Query examples](/laravel/db-query-examples.md)
+        + [Seeders](/laravel/db-seeders.md)
+        + [Production database setup](/laravel/db-production.md)
     + Extras
         + [Practice work](/laravel/practice-work.md)
         + [Blade cheat sheet](/laravel/blade-cheat-sheet.md)
+        + [Eloquent vs. Query Builder](/laravel/db-eloquent-vs-qb.md)
