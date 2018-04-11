@@ -24,7 +24,7 @@ So, do a `git status` locally. Are there any new or changed migration or seeder 
 
 ## 2. Find your default MySQL password
 
-When you first SSH into your DigitalOcean server, you should see a welcome message (a.k.a &ldquo;[message of the day](http://en.wikipedia.org/wiki/Motd_(Unix)&rdquo;)).
+When you first SSH into your DigitalOcean server, you should see a welcome message (a.k.a &ldquo;[message of the day](http://en.wikipedia.org/wiki/Motd_(Unix))&rdquo;).
 
 This message includes a note indicating that your default MySQL password is saved in `/root/.digitalocean_password`
 
