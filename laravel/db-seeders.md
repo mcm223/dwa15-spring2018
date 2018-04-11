@@ -65,16 +65,16 @@ public function run()
 
     $count = count($books);
 
-    foreach ($books as $key => $book) {
+    foreach ($books as $key => $bookData) {
         $book = new Book();
 
         $book->created_at = Carbon\Carbon::now()->subDays($count)->toDateTimeString();
         $book->updated_at = Carbon\Carbon::now()->subDays($count)->toDateTimeString();
-        $book->title = $book[0];
-        $book->author = $book[1];
-        $book->published_year = $book[2];
-        $book->cover_url = $book[3];
-        $book->purchase_url = $book[4];
+        $book->title = $bookData[0];
+        $book->author = $bookData[1];
+        $book->published_year = $bookData[2];
+        $book->cover_url = $bookData[3];
+        $book->purchase_url = $bookData[4];
 
         $book->save();
         $count--;
