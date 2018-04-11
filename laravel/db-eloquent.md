@@ -106,9 +106,9 @@ class PracticeController extends Controller
         # Note how each parameter corresponds to a field in the table
         $book->title = 'Harry Potter and the Sorcerer\'s Stone';
         $book->author = 'J.K. Rowling';
-        $book->published = 1997;
-        $book->cover = 'http://prodimage.images-bn.com/pimages/9780590353427_p0_v1_s484x700.jpg';
-        $book->purchase_link = 'http://www.barnesandnoble.com/w/harry-potter-and-the-sorcerers-stone-j-k-rowling/1100036321?ean=9780590353427';
+        $book->published_year = 1997;
+        $book->cover_url = 'http://prodimage.images-bn.com/pimages/9780590353427_p0_v1_s484x700.jpg';
+        $book->purchase_url = 'http://www.barnesandnoble.com/w/harry-potter-and-the-sorcerers-stone-j-k-rowling/1100036321?ean=9780590353427';
 
         # Invoke the Eloquent `save` method to generate a new row in the
         # `books` table, with the above data
@@ -187,7 +187,7 @@ Here are examples showing a combination of constraint and fetch methods:
 # Get only books published after 1950
 #   `where` is the constraint method
 #   `get` is the fetch method
-$results = Book::where('published', '>', 1950)->get();
+$results = Book::where('published_year', '>', 1950)->get();
 dump($results->toArray()); # Study the results
 ```
 
@@ -214,7 +214,7 @@ dump($results->toArray()); # Study the results
 # Get only books that were published after 1950 *and* authored by F. Scott Fitzgerald
     # `where` is the constraint method, and it's used twice
     # `get` is the fetch method
-$results = Book::where('published', '>', 1950)->where('author', '=', 'F. Scott Fitzgerald')->get();
+$results = Book::where('published_year', '>', 1950)->where('author', '=', 'F. Scott Fitzgerald')->get();
 dump($results->toArray()); # Study the results
 ```
 
@@ -242,7 +242,7 @@ if (!$book) {
 } else {
     # Change some properties
     $book->title = 'The Really Great Gatsby';
-    $book->published = '2025';
+    $book->published_year = '2025';
 
     # Save the changes
     $book->save();
