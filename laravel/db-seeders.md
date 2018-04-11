@@ -54,7 +54,7 @@ The `run` method is invoked when this seeder is called. Given that, the `run` me
 ```php
 public function run()
 {
-    $books = [
+     $books = [
         ['The Great Gatsby', 'F. Scott Fitzgerald', 1925, 'http://img2.imagesbn.com/p/9780743273565_p0_v4_s114x166.JPG', 'http://www.barnesandnoble.com/w/the-great-gatsby-francis-scott-fitzgerald/1116668135?ean=9780743273565'],
         ['The Bell Jar', 'Sylvia Plath', 1963, 'http://img1.imagesbn.com/p/9780061148514_p0_v2_s114x166.JPG', 'http://www.barnesandnoble.com/w/bell-jar-sylvia-plath/1100550703?ean=9780061148514'],
         ['I Know Why the Caged Bird Sings', 'Maya Angelou', 1969, 'http://img1.imagesbn.com/p/9780345514400_p0_v1_s114x166.JPG', 'http://www.barnesandnoble.com/w/i-know-why-the-caged-bird-sings-maya-angelou/1100392955?ean=9780345514400'],
@@ -64,17 +64,19 @@ public function run()
     ];
 
     $count = count($books);
-    
+
     foreach ($books as $key => $book) {
-        Book::insert([
-            'created_at' => Carbon\Carbon::now()->subDays($count)->toDateTimeString(),
-            'updated_at' => Carbon\Carbon::now()->subDays($count)->toDateTimeString(),
-            'title' => $book[0],
-            'author' => $book[1],
-            'published_year' => $book[2],
-            'cover_url' => $book[3],
-            'purchase_url' => $book[4]
-        ]);
+        $book = new Book();
+
+        $book->created_at = Carbon\Carbon::now()->subDays($count)->toDateTimeString();
+        $book->updated_at = Carbon\Carbon::now()->subDays($count)->toDateTimeString();
+        $book->title = $book[0];
+        $book->author = $book[1];
+        $book->published_year = $book[2];
+        $book->cover_url = $book[3];
+        $book->purchase_url = $book[4];
+
+        $book->save();
         $count--;
     }
 }
