@@ -235,7 +235,7 @@ To update a row in a table, you first have to select which row(s) you wish to ed
 
 ```php
 # First get a book to update
-$book = Book::where('author', 'LIKE', '%Scott%')->first();
+$book = Book::where('author', '=', 'F. Scott Fitzgerald')->first();
 
 if (!$book) {
     dump("Book not found, can't update.");
