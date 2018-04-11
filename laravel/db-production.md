@@ -123,7 +123,9 @@ DB_PASSWORD=9f15faddf3d4c9825fac6f22ab042ad4b47919ff063bd063
 
 When you're done updating your values, save your changes and exit nano (`ctrl + x`, then `y`, then *Enter*).
 
-Now you want to confirm these credentials work.
+Next, run `php artisan config:clear` to ensure Laravel detects these changes to your configs.
+
+With the above steps complete, you next want to confirm these credentials work.
 
 If you still have the [/debug route](https://github.com/susanBuck/dwa15-fall2017/blob/master/03_Laravel/24_Local_database_config.md#test-your-connection) from when you were configuring your local database connection, you can use that again to confirm your live database connection.
 
