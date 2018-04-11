@@ -102,8 +102,8 @@ class PracticeController extends Controller
         # Instantiate a new Book Model object
         $book = new Book();
 
-        # Set the parameters
-        # Note how each parameter corresponds to a field in the table
+        # Set the properties
+        # Note how each property corresponds to a field in the table
         $book->title = 'Harry Potter and the Sorcerer\'s Stone';
         $book->author = 'J.K. Rowling';
         $book->published_year = 1997;
