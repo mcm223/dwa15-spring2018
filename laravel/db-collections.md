@@ -6,14 +6,12 @@ $book = Book::find(1);
 $book = Book::orderBy('title')->first();
 ```
 
-Other fetch methods (e.g. `get`, `all`), however, return a **Collection object**, which contains 1 or many objects corresponding to row(s) in your table:
+Other fetch methods (e.g. `get`, `all`) return a **Collection object**, which contains 1 or many objects corresponding to row(s) in your table:
 ```php
 $books = Book::all();
 $books = Book::orderBy('title')->get();
 $books = Book::limit(1)->get();
 ```
-
-<img src='https://s3.amazonaws.com/making-the-internet/laravel-collection@2x.png' style='max-width:490px;' alt=''>
 
 
 ## Collection Magic
