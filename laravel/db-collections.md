@@ -1,19 +1,30 @@
 ## Collections
 
-Certain Eloquent fetch methods (e.g. `find,` `first`) return single objects corresponding to a single row in your table:
+If we study the data type of `$results` for the following queries, we'll see it contains a single objects (of type Book):
+
 ```php
 # The following queries return a Book object
-$book = Book::find(1);  
-$book = Book::orderBy('title')->first();
+$results = Book::find(1);  
+
+$results = Book::orderBy('title')->first();
+
+$results = Book::limit(1)->get();
 ```
 
-Other fetch methods (e.g. `get`, `all`) return a **Collection object**, which contains 1 or many objects corresponding to row(s) in your table:
+Compare that to the results of the following queries, where we'll see a Collection object containing 0 or many objects (of type Book):
 ```php
-# The following queries returns a Collection object that contains an array of Book object(s)
-$books = Book::all(); 
-$books = Book::orderBy('title')->get();
-$books = Book::limit(1)->get(); # Even though we limited it to 1, the get fetch method will still return a Collection
+# Yields a collection of multiple books
+$results = Book::all(); 
+$results = Book::orderBy('title')->get(); 
+
+# Should match 1 book; yields a Collection of 1
+$results = Book::where('author', 'F. Scott Fitzgerald')->get();
+
+# Should match 0 books; yields an empty Collection
+$results = Book::where('author', 'Virginia Wolf')->get(); 
 ```
+
+> &ldquo;All **multi-result sets** returned by Eloquent are instances of the `Illuminate\Database\Eloquent\Collection` object, including results retrieved via the get method [...]. The Eloquent collection object extends the Laravel base collection, so it naturally inherits dozens of methods used to fluently work with the underlying array of Eloquent models.&rdquo; [-laravel.com/docs/eloquent-collections](https://laravel.com/docs/eloquent-collections)
 
 
 ## Collection Magic
