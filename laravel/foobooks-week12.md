@@ -3,9 +3,15 @@ The following is a rough outline of the modifications I'll make to Foobooks in W
 
 __This should not be considered a stand-alone document; for full details please refer to the lecture video and the Foobooks code source.__
 
+## View all books
+- `BookController@index`
+- `/resources/views/books/index.blade.php`
+
+## View individual book
+- `BookController@show`
+- `/resources/views/books/show.blade.php`
 
 ## Add a book
-
 Add the `old` helper for field values, and set default values to rapidly test:
 
 + Title: `Green Eggs & Ham`
@@ -53,7 +59,6 @@ Which can be styled however you want:
     text-align: center;
 }
 ```
-
 
 ## Edit a book
 Start `books/edit.blade.php` by copying `books/create.blade.php`.
