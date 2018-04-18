@@ -22,7 +22,6 @@ Add the `old` helper for field values, and set default values to rapidly test:
 
 (We'll remove this when we're done debugging)
 
-
 In `BookController.php` update `store` to save the book to the database:
 ```php
 $book = new Book();
@@ -34,15 +33,17 @@ $book->purchase_url = $request->input('purchase_url');
 $book->save();
 ```
 
-Redirect to the book index and  [flash](https://laravel.com/docs/redirects#redirecting-with-flashed-session-data) a confirmation message which can be done via redirect's `with` method:
+Redirect to the book index and [flash](https://laravel.com/docs/redirects#redirecting-with-flashed-session-data) a confirmation message which can be done via redirect's `with` method:
 ```
-return redirect('/books')->with('alert', 'Your book was added.');
+return redirect('/books')->with([
+    'alert' => 'Your book was added.'
+    ]);
 ```
 
 Then in `master.blade.php`:
 ```php
-@if(session('message'))
-    <div class='alert'>{{ session('message') }}</div>
+@if(session('alert'))
+    <div class='alert'>{{ session('alert') }}</div>
 @endif
 ```
 
@@ -95,7 +96,9 @@ public function edit($id)
     $book = Book::find($id);
 
     if (!$book) {
-        return redirect('/books')->with('alert', 'Book not found.');
+        return redirect('/books')->with([
+            'alert' => 'Book not found.'
+        ]);
     }
 
     return view('books.edit')->with([
@@ -127,7 +130,9 @@ public function update(Request $request, $id)
     $book->purchase_url = $request->input('purchase_url');
     $book->save();
 
-    return redirect('/books/'.$id.'/edit')->with('alert', 'Your changes were saved.');
+    return redirect('/books/'.$id.'/edit')->with([
+        'alert' => 'Your changes were saved.'
+    ]);
 }
 ```
 
