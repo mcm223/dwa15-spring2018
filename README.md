@@ -96,6 +96,8 @@ If you have a suggestion regarding a particular topic (correction, typo, etc.), 
         + [Query examples](/laravel/db-query-examples.md)
         + [Seeders](/laravel/db-seeders.md)
         + [Production database setup](/laravel/db-production.md)
+        + [Collections](/laravel/db-collections.md)
+    + [Foobooks Week 12](/laravel/foobooks-week12.md)
     + Extras
         + [Practice work](/laravel/practice-work.md)
         + [Blade cheat sheet](/laravel/blade-cheat-sheet.md)
