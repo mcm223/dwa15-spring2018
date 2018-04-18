@@ -1,9 +1,8 @@
-An Eloquent query returns a __Collection object__.
+Any Eloquent query that yields multiple rows will return a Collection object.
 
-The Collection object is a wrapper for an Array called **items** which contains all the data of your query *and* methods for working with this data.
+This Collection object will contain an array of items, where each item corresponds to a row in your table.
 
 <img src='https://s3.amazonaws.com/making-the-internet/laravel-collection@2x.png' style='max-width:490px;' alt=''>
-
 
 
 ## Collection Magic
