@@ -68,9 +68,12 @@ Because of the above points, you can pass a Collection to a view where it can be
 
 Controller:
 ```php
-function index() {
+function index() 
+{
     $books = Book::all();
-    return view('books.index')->with(['books' => $books]);
+    return view('books.index')->with([
+        'books' => $books
+    ]);
 }
 ```
 
@@ -161,7 +164,7 @@ You *could* run another Eloquent query to fetch the three most recently added bo
 
 ```php
 # Query DB
-$newBooks = Book::orderBy('created_at', 'descending')->limit(3)->get(); 
+$newBooks = Book::orderByDesc('created_at')->limit(3)->get(); 
 ```
 
 But this is wasteful&mdash; the information you need already exists in the `$books` Collection from the previous query, so you should extract it from there rather than making &ldquo;another trip&rdquo; to the database. And so, using some Collection methods, you can extract the information you need from the `$books` Collection:
