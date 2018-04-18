@@ -2,15 +2,17 @@
 
 Certain Eloquent fetch methods (e.g. `find,` `first`) return single objects corresponding to a single row in your table:
 ```php
-$book = Book::find(1);
+# The following queries return a Book object
+$book = Book::find(1);  
 $book = Book::orderBy('title')->first();
 ```
 
 Other fetch methods (e.g. `get`, `all`) return a **Collection object**, which contains 1 or many objects corresponding to row(s) in your table:
 ```php
-$books = Book::all();
+# The following queries returns a Collection object that contains an array of Book object(s)
+$books = Book::all(); 
 $books = Book::orderBy('title')->get();
-$books = Book::limit(1)->get();
+$books = Book::limit(1)->get(); # Even though we limited it to 1, the get fetch method will still return a Collection
 ```
 
 
