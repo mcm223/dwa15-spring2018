@@ -7,8 +7,6 @@ If we study the data type of `$results` for the following queries, we'll see it 
 $results = Book::find(1);  
 
 $results = Book::orderBy('title')->first();
-
-$results = Book::limit(1)->get();
 ```
 
 Compare that to the results of the following queries, where we'll see a Collection object containing 0 or many objects (of type Book):
@@ -17,11 +15,15 @@ Compare that to the results of the following queries, where we'll see a Collecti
 $results = Book::all(); 
 $results = Book::orderBy('title')->get(); 
 
-# Should match 1 book; yields a Collection of 1
+# Should match 1 book; yields a Collection of 1 Book
 $results = Book::where('author', 'F. Scott Fitzgerald')->get();
 
 # Should match 0 books; yields an empty Collection
-$results = Book::where('author', 'Virginia Wolf')->get(); 
+$results = Book::where('author', 'Virginia Wolf')->get();
+
+# Even though we limit it to 1 book, we're using the `get` fetch method so we get a Collection (of 1 Book)
+$results = Book::limit(1)->get();
+ 
 ```
 
 > &ldquo;All **multi-result sets** returned by Eloquent are instances of the `Illuminate\Database\Eloquent\Collection` object, including results retrieved via the get method [...]. The Eloquent collection object extends the Laravel base collection, so it naturally inherits dozens of methods used to fluently work with the underlying array of Eloquent models.&rdquo; [-laravel.com/docs/eloquent-collections](https://laravel.com/docs/eloquent-collections)
