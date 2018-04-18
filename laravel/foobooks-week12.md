@@ -54,7 +54,7 @@ Which can be styled however you want:
 ## Edit a book
 Start `books/edit.blade.php` by copying `books/create.blade.php`.
 
-Using the [route patterns described here](laravel/forms-post.md#route-and-method-name-choices), create the routes to a) show the edit form and b) process the edit form:
+Using the [route patterns described here](/laravel/forms-post.md#route-and-method-name-choices), create the routes to a) show the edit form and b) process the edit form:
 ```php
 # Show the form to edit a specific book
 Route::get('/books/{id}/edit', 'BookController@edit');
