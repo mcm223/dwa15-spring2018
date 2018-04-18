@@ -1,6 +1,17 @@
-Any Eloquent query that yields multiple rows will return a Collection object.
+## Collections
 
-This Collection object will contain an array of items, where each item corresponds to a row in your table.
+Certain Eloquent fetch methods (e.g. `find,` `first`) return single objects corresponding to a single row in your table:
+```php
+$book = Book::find(1);
+$book = Book::orderBy('title')->first();
+```
+
+Other fetch methods (e.g. `get`, `all`), however, return a **Collection object**, which contains 1 or many objects corresponding to row(s) in your table:
+```php
+$books = Book::all();
+$books = Book::orderBy('title')->get();
+$books = Book::limit(1)->get();
+```
 
 <img src='https://s3.amazonaws.com/making-the-internet/laravel-collection@2x.png' style='max-width:490px;' alt=''>
 
@@ -69,7 +80,8 @@ Controller:
 ```php
 function index() 
 {
-    $books = Book::all();
+    $books = Book::orderBy('title')->get();
+    
     return view('books.index')->with([
         'books' => $books
     ]);
@@ -132,6 +144,8 @@ __Refer to the docs on [Collections: Available Methods](https://laravel.com/docs
 | `map()` | Loop through a collection, returning a new collection as a result. Good for copying and editing a collection.
 | `filter()` | Loop through a collection, returning true/false as you go. What is true stays, what is false gets removed.
 | `sort()` | Sort through each item with a callback.
+| `sortBy()` | Sorts the collection by a given key.
+| `sortByDesc()` | Sorts the collection in the opposite order by a given key.
 | `reverse()` | Reverses a collection.
 | `isEmpty()` | Determine if the collection is empty or not.
 | `toArray()` | Get the collection of items as a plain array.
