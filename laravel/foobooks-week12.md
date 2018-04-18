@@ -12,16 +12,6 @@ __This should not be considered a stand-alone document; for full details please 
 - `/resources/views/books/show.blade.php`
 
 ## Add a book
-Add the `old` helper for field values, and set default values to rapidly test:
-
-+ Title: `Green Eggs & Ham`
-+ Author: `Dr. Seuss`
-+ Published Year: `1960`
-+ Cover URL: `http://prodimage.images-bn.com/pimages/9780394800165_p0_v4_s192x300.jpg`
-+ Purchase URL: `http://www.barnesandnoble.com/w/green-eggs-and-ham-dr-seuss/1100170349`
-
-(We'll remove this when we're done debugging)
-
 In `BookController.php` update `store` to save the book to the database:
 ```php
 $book = new Book();
@@ -33,14 +23,14 @@ $book->purchase_url = $request->input('purchase_url');
 $book->save();
 ```
 
-Redirect to the book index and [flash](https://laravel.com/docs/redirects#redirecting-with-flashed-session-data) a confirmation message which can be done via redirect's `with` method:
+Redirect and [flash](https://laravel.com/docs/redirects#redirecting-with-flashed-session-data) a confirmation message which can be done via redirect's `with` method:
 ```
-return redirect('/books')->with([
+return redirect('/books/create')->with([
     'alert' => 'Your book was added.'
     ]);
 ```
 
-Then in `master.blade.php`:
+Then in `master.blade.php` we display the alert:
 ```php
 @if(session('alert'))
     <div class='alert'>{{ session('alert') }}</div>
@@ -64,7 +54,7 @@ Which can be styled however you want:
 ## Edit a book
 Start `books/edit.blade.php` by copying `books/create.blade.php`.
 
-Create the routes to a) show the edit form and b) process the edit form:
+Using the [route patterns described here](laravel/forms-post.md#route-and-method-name-choices), create the routes to a) show the edit form and b) process the edit form:
 ```php
 # Show the form to edit a specific book
 Route::get('/books/{id}/edit', 'BookController@edit');
@@ -73,8 +63,8 @@ Route::get('/books/{id}/edit', 'BookController@edit');
 Route::put('/books/{id}', 'BookController@update');
 ```
 
-Note the use of the `put` method here. In order to submit via PUT we need to use [form method spoofing](https://laravel.com/docs/routing#form-method-spoofing) like so:
 
+In order to submit via PUT we need to use [form method spoofing](https://laravel.com/docs/routing#form-method-spoofing) like so:
 ```php
 <form method='POST' action='/books/{{ $book->id }}'>
 
@@ -116,13 +106,13 @@ public function update(Request $request, $id)
 {
    $this->validate($request, [
        'title' => 'required',
+       'author' => 'required',
        'published_year' => 'required|digits:4|numeric',
        'cover_url' => 'required|url',
        'purchase_url' => 'required|url',
    ]);
 
     $book = Book::find($id);
-
     $book->title = $request->input('title');
     $book->author = $request->input('author');
     $book->published_year = $request->input('published_year');
