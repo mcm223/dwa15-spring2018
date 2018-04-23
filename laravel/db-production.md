@@ -20,7 +20,7 @@ Specifically, you want to make sure any __migration files__ and any __seeder fil
 
 So, do a `git status` locally. Are there any new or changed migration or seeder files? If so, go ahead and sync up so your live server also has these changes.
 
-
+Also recall that you want to run `composer install --no-dev` on production when deploying not only to ensure all packages are up to date, but to make sure your Composer autoloading class map file reflects any new classes (including seeds/migrations) that have been added.
 
 ## 2. Find your default MySQL password
 
