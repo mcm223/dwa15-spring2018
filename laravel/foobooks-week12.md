@@ -1,4 +1,5 @@
-# Foobooks Week 12: Database interaction examples
+# Foobooks: CRUD
+
 The following is a rough outline of the modifications I'll make to Foobooks in Week 12's lecture.
 
 __This should not be considered a stand-alone document; for full details please refer to the lecture video and the Foobooks code source.__
