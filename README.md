@@ -63,7 +63,7 @@ If you have a suggestion regarding a particular topic (correction, typo, etc.), 
         + [Garbage collection](/php/garbage-collection.md)
         + [Extending Form.php](/php/form.php-extending.md)
         + [Cookies & Sessions](/php/cookies-and-sessions.md)
-+ Laravel
+ + Laravel
     + [Preface](/laravel/preface.md)
     + [Frameworks intro](/laravel/frameworks-intro.md)
     + [Composer intro](/laravel/composer-intro.md)
