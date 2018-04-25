@@ -216,7 +216,7 @@ public function run()
 
         # Extract just the last name from the book data...
         # F. Scott Fitzgerald => ['F.', 'Scott', 'Fitzgerald'] => 'Fitzgerald'
-        $name = explode(' ', $book[1]);
+        $name = explode(' ', $bookData[1]);
         $lastName = array_pop($name);
 
         # Find that author in the authors table
@@ -312,8 +312,8 @@ $author = Author::where('first_name', '=', 'J.K.')->first();
 $book = new Book;
 $book->title = "Fantastic Beasts and Where to Find Them";
 $book->published = 2017;
-$book->cover = 'http://prodimage.images-bn.com/pimages/9781338132311_p0_v2_s192x300.jpg';
-$book->purchase_link = 'http://www.barnesandnoble.com/w/fantastic-beasts-and-where-to-find-them-j-k-rowling/1004478855';
+$book->cover_url = 'http://prodimage.images-bn.com/pimages/9781338132311_p0_v2_s192x300.jpg';
+$book->purchase_url = 'http://www.barnesandnoble.com/w/fantastic-beasts-and-where-to-find-them-j-k-rowling/1004478855';
 $book->author()->associate($author); # <--- Associate the author with this book
 $book->save();
 dump($book->toArray());

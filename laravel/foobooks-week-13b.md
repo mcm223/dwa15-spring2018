@@ -56,13 +56,9 @@ public function edit($id = null)
     # Get all the possible tags so we can include them with checkboxes in the view
     $tagsForCheckboxes = Tag::getForCheckboxes();
 
-    # Create a simple array of just the tag names for tags associated with this book;
+    # Get just the tag names for tags associated with this book;
     # will be used in the view to decide which tags should be checked off
-    $tagsForThisBook = [];
-    foreach ($book->tags as $tag) {
-        $tagsForThisBook[] = $tag->name;
-    }
-    # Results in an array like this: $tagsForThisBook => ['novel', 'fiction', 'classic'];
+    $tagsForThisBook = $book->tags->pluck('name');
 
     return view('book.edit')
         ->with([
@@ -125,14 +121,14 @@ public function delete(Request $request)
     $book = Book::find($id);
 
     if (!$book) {
-        return redirect('/book')->with('alert', 'Book not found');
+        return redirect('/books')->with('alert', 'Book not found');
     }
 
     $book->tags()->detach();
 
     $book->delete();
 
-    return redirect('/book')->with('alert', $book->title.' was removed.');
+    return redirect('/books')->with('alert', $book->title.' was removed.');
 }
 ```
 
