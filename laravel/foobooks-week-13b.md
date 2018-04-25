@@ -26,7 +26,7 @@ First, a `getForCheckboxes()` method in the Tag model:
 ```php
 public static function getForCheckboxes()
 {
-    $tags = Tag::orderBy('name')->get();
+    $tags = self::orderBy('name')->get();
 
     $tagsForCheckboxes = [];
 
@@ -58,14 +58,14 @@ public function edit($id = null)
 
     # Get just the tag names for tags associated with this book;
     # will be used in the view to decide which tags should be checked off
-    $tagsForThisBook = $book->tags->pluck('name');
+    $tags = $book->tags->pluck('tags.id')->toArray();
 
     return view('book.edit')
         ->with([
             'book' => $book,
             'authorsForDropdown' => $tagsForThisBook,
             'tagsForCheckbox' => $tagsForCheckboxes,
-            'tagsForThisBook' => $tagsForThisBook,
+            'tags' => $tags,
         ]);
 }
 ```
@@ -81,7 +81,7 @@ Use this array of tags to construct the checkboxes in the view:
         type='checkbox'
         value='{{ $id }}'
         name='tags[]'
-        {{ (isset($tagsForThisBook) and in_array($name, $tagsForThisBook)) ? 'CHECKED' : '' }}
+        {{ (isset($tags) and in_array($name, $tags)) ? 'CHECKED' : '' }}
     >
     {{ $name }} <br>
 @endforeach
@@ -103,8 +103,9 @@ public function update(Request $request, $id)
 
     $book->title = $request->title;
     $book->cover = $request->cover;
-    $book->published = $request->published;
-    $book->purchase_link = $request->purchase_link;
+    $book->published_year = $request->published_year;
+    $book->purchase_url = $request->purchase_url;
+    $book->cover_url = $request->cover_url;
     $book->save();
 
     # [...finish removed for brevity..]

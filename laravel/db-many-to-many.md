@@ -139,7 +139,7 @@ In the Book model add a `tags()` method, specifying that each book belongs to ma
 ```php
 public function tags()
 {
-    # With timetsamps() will ensure the pivot table has its created_at/updated_at fields automatically maintained
+    # withTimestamps will ensure the pivot table has its created_at/updated_at fields automatically maintained
     return $this->belongsToMany('App\Tag')->withTimestamps();
 }
 ```
