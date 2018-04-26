@@ -1,9 +1,9 @@
-__Bonus material__
+# Authentication Setup
 
-Integrating authentication into Project 4 is optional and this information will not be addressed in any of the progress log quick check questions.
+**Preface: Integrating authentication into Project 4 is optional, and this material will not be coverd in any assignment questions.**
 
 
-## Authentication
+## What is authentication?
 Authentication is the broad term used to describe the features of an application that lets *users* access functionality not available to non-users (*guests*). Furthermore, once a user is identified on an application (i.e. logged in), the app can deliver content specific to that user (e.g., instead of showing all books in the library, show just the books that belong to the user).
 
 Typically, an authentication system involves the following components:
@@ -190,26 +190,26 @@ Note that the following essential pieces are kept in tact:
 
     Don't have an account? <a href='/register'>Register here...</a>
 
-    <form method="POST" action="{{ route('login') }}">
+    <form method='POST' action='{{ route('login') }}'>
 
         {{ csrf_field() }}
 
-        <label for="email">E-Mail Address</label>
-        <input id="email" type="email" name="email" value="{{ old('email') }}" required autofocus>
-        @include('modules.error-field', ['fieldName' => 'email'])
+        <label for='email'>E-Mail Address</label>
+        <input id='email' type='email' name='email' value='{{ old('email') }}' required autofocus>
+        @include('modules.error-field', ['field' => 'email'])
 
-        <label for="password">Password</label>
-        <input id="password" type="password" name="password" required>
-        @include('modules.error-field', ['fieldName' => 'password'])
+        <label for='password'>Password</label>
+        <input id='password' type='password' name='password' required>
+        @include('modules.error-field', ['field' => 'password'])
 
         <label>
-            <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
+            <input type='checkbox' name='remember' {{ old('remember') ? 'checked' : '' }}> Remember Me
         </label>
 
-        <button type="submit" class="btn btn-primary">Login</button>
+        <button type='submit' class='btn btn-primary'>Login</button>
 
-        <a class="btn btn-link" href="{{ route('password.request') }}">Forgot Your Password?</a>
-        
+        <a class='btn btn-link' href='{{ route('password.request') }}'>Forgot Your Password?</a>
+
     </form>
 
 @endsection
@@ -225,25 +225,25 @@ Similarly, we can amend `resources/views/auth/register.blade.php` to this:
 
     Already have an account? <a href='/login'>Login here...</a>
 
-    <form method="POST" action="{{ route('register') }}">
+    <form method='POST' action='{{ route('register') }}'>
         {{ csrf_field() }}
 
-        <label for="name">Name</label>
-        <input id="name" type="text" name="name" value="{{ old('name') }}" required autofocus>
-        @include('modules.error-field', ['fieldName' => 'name'])
+        <label for='name'>Name</label>
+        <input id='name' type='text' name='name' value='{{ old('name') }}' required autofocus>
+        @include('modules.error-field', ['field' => 'name'])
 
-        <label for="email">E-Mail Address</label>
-        <input id="email" type="email" name="email" value="{{ old('email') }}" required>
-        @include('modules.error-field', ['fieldName' => 'email'])
+        <label for='email'>E-Mail Address</label>
+        <input id='email' type='email' name='email' value='{{ old('email') }}' required>
+        @include('modules.error-field', ['field' => 'email'])
 
-        <label for="password">Password (min: 6)</label>
-        <input id="password" type="password" name="password" required>
-        @include('modules.error-field', ['fieldName' => 'password'])
+        <label for='password'>Password (min: 6)</label>
+        <input id='password' type='password' name='password' required>
+        @include('modules.error-field', ['field' => 'password'])
 
-        <label for="password-confirm">Confirm Password</label>
-        <input id="password-confirm" type="password" name="password_confirmation" required>
+        <label for='password-confirm'>Confirm Password</label>
+        <input id='password-confirm' type='password' name='password_confirmation' required>
 
-        <button type="submit" class="btn btn-primary">Register</button>
+        <button type='submit' class='btn btn-primary'>Register</button>
     </form>
 @endsection
 ```
@@ -302,12 +302,13 @@ Here's an example of how the logout link could be worked into the Foobooks nav e
 ```
 <nav>
     <ul>
-        @foreach($nav as $link => $label)
-            <li><a href='/{{ $link }}' class='{{ Request::is($link) ? 'active' : '' }}'>{{ $label }}</a>
+        @foreach(config('app.nav') as $link => $label)
+            <li><a href='{{ $link }}' class='{{ Request::is(substr($link, 1)) ? 'active' : '' }}'>{{ $label }}</a>
         @endforeach
+
         <li>
             <form method='POST' id='logout' action='/logout'>
-                {{csrf_field()}}
+                {{ csrf_field() }}
                 <a href='#' onClick='document.getElementById("logout").submit();'>Logout</a>
             </form>
         </li>

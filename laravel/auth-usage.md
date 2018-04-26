@@ -1,6 +1,5 @@
-__Bonus material__
-
-Integrating authentication into Project 4 is optional and this information will not be addressed in any of the progress log quick check questions.
+# Authentication usage
+**Preface: Integrating authentication into Project 4 is optional, and this material will not be coverd in any assignment questions.**
 
 
 ## Auth::check()
@@ -11,51 +10,69 @@ To demonstrate this, we're now going to shift Foobooks so its features are only 
 So if the visitor is *not* logged in, they should see these links:
 + Register
 + Login
++ About
++ Contact
 
 If the visitor *is* logged in they should these links:
-+ Trivia
 + Books
-+ Add a Book
++ New Book
 + Search
++ Trivia
 + Practice
++ About
++ Contact
 + Logout
 
-To accomplish this, we'll use the __`Auth::check()`__ method which returns `True` if the user is logged in or `False` if they are not.
-
-Study the full code of `resources/views/modules/nav.blade.php` to see how the navigation is adapted for users vs. guests:
+You'll recall that our navigation links are defined in `/config/app.php`:
 
 ```php
-@php
-    # Define a PHP array of links and their labels
-    # Quite a bit of straight PHP code here, but arguably ok
-    # because it's display specific and allows you to edit the link
-    # labels without having to edit a logic file.
-    if(Auth::check()) {
-        $nav = [
-            'trivia' => 'Trivia',
-            'book' => 'Books',
-            'book/create' => 'Add a book',
-            'search' => 'Search',
-            'practice' => 'Practice',
-        ];
-    } else {
-        $nav = [
-            'register' => 'Register',
-            'login' => 'Login',
-        ];
-    }
-@endphp
+'nav' => [
+    '/books' => 'Books',
+    '/books/create' => 'New Book',
+    '/books/search' => 'Search',
+    '/trivia' => 'Trivia',
+    '/practice' => 'Practice',
+    '/about' => 'About',
+    '/contact' => 'Contact',
+],
+```
 
+We're going to split this into two separate configs, one for when the visitor is not logged in (`nav`) and one for when they are (`nav1`):
+```php
+# Guest navigation links
+'nav' => [
+    '/register' => 'Register',
+    '/login' => 'Login',
+    '/about' => 'About',
+    '/contact' => 'Contact',
+],
+
+# Logged-in user navigation links
+'nav1' => [
+    '/books' => 'Books',
+    '/books/create' => 'New Book',
+    '/books/search' => 'Search',
+    '/trivia' => 'Trivia',
+    '/practice' => 'Practice',
+    '/about' => 'About',
+    '/contact' => 'Contact',
+],
+```
+
+
+Next, in the nav view we'll __`Auth::check()`__ method to dynamically specify whether `nav` or `nav1` should be displayed. We'll also use it to decide whether to show the logout link or not. (We can't just include our logout link in our nav config because it requires a form, which is different from the other links.)
+
+```php
 <nav>
     <ul>
-        @foreach($nav as $link => $label)
-            <li><a href='/{{ $link }}' class='{{ Request::is($link) ? 'active' : '' }}'>{{ $label }}</a>
+        @foreach(config('app.nav'.Auth::check()) as $link => $label)
+            <li><a href='{{ $link }}' class='{{ Request::is(substr($link, 1)) ? 'active' : '' }}'>{{ $label }}</a>
         @endforeach
 
         @if(Auth::check())
             <li>
                 <form method='POST' id='logout' action='/logout'>
-                    {{csrf_field()}}
+                    {{ csrf_field() }}
                     <a href='#' onClick='document.getElementById("logout").submit();'>Logout</a>
                 </form>
             </li>
@@ -63,7 +80,6 @@ Study the full code of `resources/views/modules/nav.blade.php` to see how the na
     </ul>
 </nav>
 ```
-
 
 
 
@@ -89,12 +105,12 @@ Knowing this, we'll adapt a route to use this middleware.
 For example, here's the existing route to view the *Add a book* page:
 
 ```php
-Route::get('/book/create', 'BookController@create');
+Route::get('/books/create', 'BookController@create');
 ```
 
 Update this route to look like this:
 ```php
-Route::get('/book/create', [
+Route::get('/books/create', [
     'middleware' => 'auth',
     'uses' => 'BookController@create'
 ]);
@@ -104,9 +120,9 @@ Now, when `/book/create` is visited, the `auth` middleware will apply.
 
 __Test it out:__
 
-If you are not logged in and you attempt to visit `http://localhost/book/create` you should be redirected to the login page.
+If you are not logged in and you attempt to visit `http://localhost/books/create` you should be redirected to the login page.
 
-Then, if you successfully login, you'll be sent back to `http://localhost/book/create`.
+Then, if you successfully login, you'll be sent back to `http://localhost/books/create`.
 
 
 
@@ -116,25 +132,25 @@ In the above example, we restricted a single route, but you can also restrict ma
 ```php
 Route::group(['middleware' => 'auth'], function () {
     # Create a book
-    Route::get('/book/create', 'BookController@create');
-    Route::post('/book', 'BookController@store');
+    Route::get('/books/create', 'BookController@create');
+    Route::post('/books', 'BookController@store');
 
     # Edit a book
-    Route::get('/book/{id}/edit', 'BookController@edit');
-    Route::put('/book/{id}', 'BookController@update');
+    Route::get('/books/{id}/edit', 'BookController@edit');
+    Route::put('/books/{id}', 'BookController@update');
 
     # Delete a book
-    Route::get('/book/{id}/delete', 'BookController@delete');
-    Route::delete('/book/{id}', 'BookController@destroy');
+    Route::get('/books/{id}/delete', 'BookController@delete');
+    Route::delete('/books/{id}', 'BookController@destroy');
 
     # View all books
-    Route::get('/book', 'BookController@index');
+    Route::get('/books', 'BookController@index');
 
     # View a book
-    Route::get('/book/{id}', 'BookController@show');
+    Route::get('/books/{id}', 'BookController@show');
 
     # Search all books
-    Route::get('/search', 'BookController@search');
+    Route::get('/books/search', 'BookController@search');
 });
 ```
 
@@ -150,7 +166,7 @@ return view('x')->with(['user' => $user]);
 
 However, if *every* page needs this info, this makes for a lot of repeat code. A better approach is to find a way to make this data &ldquo;universally&rdquo; available.
 
-There's several different ways you accomplish this task, but we'll use a [view composer](https://laravel.com/docs/5.5/views#view-composers).
+There's several different ways you accomplish this task, but we'll use a [view composer](https://laravel.com/docs/views#view-composers).
 
 > &ldquo;View composers are callbacks or class methods that are called when a view is rendered. If you have data that you want to be bound to a view each time that view is rendered, a view composer can help you organize that logic into a single location.&rdquo;
 

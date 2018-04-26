@@ -1,6 +1,5 @@
-__Bonus material__
-
-Integrating authentication into Project 4 is optional and this information will not be addressed in any of the progress log quick check questions.
+# Authentication and Foobooks
+**Preface: Integrating authentication into Project 4 is optional, and this material will not be coverd in any assignment questions.**
 
 
 ## Integrating your existing data and authentication
@@ -25,7 +24,6 @@ Fill in the migration:
 public function up()
 {
     Schema::table('books', function (Blueprint $table) {
-
         # Add a new INT field called `user_id` that has to be unsigned (i.e. positive)
         $table->integer('user_id')->unsigned();
 
@@ -37,7 +35,6 @@ public function up()
 public function down()
 {
     Schema::table('books', function (Blueprint $table) {
-
         # ref: http://laravel.com/docs/5.1/migrations#dropping-indexes
         $table->dropForeign('books_user_id_foreign');
 
@@ -62,18 +59,11 @@ $this->call(BookTagTableSeeder::class);
 Finally, update the BooksTableSeeder so that each book is associated with a user. For our example, we'll associate every book to user id 1 (`jill@harvard.edu`).
 
 ```php
-Book::insert([
-    'created_at' => $timestampForThisBook,
-    'updated_at' => $timestampForThisBook,
-    'title' => $title,
-    'author_id' => $author_id,
-    'published' => $book['published'],
-    'cover' => $book['cover'],
-    'purchase_link' => $book['purchase_link'],
-    'user_id' => 1, # <--- NEW LINE
-]);
+# [...]
+$book->purchase_url = $bookData[4];
+$book->user_id = 1; # <--- NEW LINE
+$book->save();
 ```
-
 
 
 ## Update models
@@ -101,28 +91,23 @@ Setup complete! Now let's make it so that when a user is logged in they only see
 Update the `index` method in the BookController like so:
 
 ```php
-public function index()
+public function index(Request $request)
 {
     $user = $request->user();
 
     # Note: We're getting the user from the request, but you can also get it like this:
     //$user = Auth::user();
-    
-    if ($user) {
-        # Approach 1)
-        //$books = Book::where('user_id', '=', $user->id)->orderBy('title')->get();
 
-        # Approach 2) Take advantage of Model relationships
-        $books = $user->books()->orderBy('title')->get();
+    # Approach 1)
+    //$books = Book::where('user_id', '=', $user->id)->orderBy('title')->get();
 
-        # Get 3 most recently added books
-        $newBooks = $books->sortByDesc('created_at')->take(3); # Query existing Collection
-    } else {
-        $books = [];
-        $newBooks = [];
-    }
+    # Approach 2) Take advantage of Model relationships
+    $books = $user->books()->orderBy('title')->get();
 
-    return view('book.index')->with([
+    # Query the existing Collection to get the last 3 books added
+    $newBooks = $books->sortByDesc('created_at')->take(3);
+
+    return view('books.index')->with([
         'books' => $books,
         'newBooks' => $newBooks,
     ]);
