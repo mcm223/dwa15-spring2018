@@ -1,12 +1,12 @@
 # Foobooks: One to Many
 
-The following is a __rough outline__ of some of the modifications I'll make to Foobooks during Week 13.
+The following is a __rough outline__ of the modifications I'll make to Foobooks during Week 13's lectures.
 
 __This should not be considered a stand-alone document; for full details please refer to the lecture video and the Foobooks code source.__
 
 
 ## Author dropdown
-To associate Authors with Books we'll use a dropdown filled with authors. We'll start by showing this in the *Add* feature, and later add it to the *Edit* feature.
+To associate Authors with Books we'll use a dropdown filled with authors. I'll start by showing this in the *Add a book* feature, and later add it to the *Edit a book* feature.
 
 To make this happen, we first need an __array of authors__ where the key is the author `id` and the value is the author `name`.
 
@@ -14,7 +14,7 @@ To make this happen, we first need an __array of authors__ where the key is the 
 # BookController.php
 public function create($id)
 {
-    # Get all the authors
+    # Get all the authors in alphabetical order by last name
     $authors = Author::orderBy('last_name')->get();
 
     # Organize the authors into an array where the key = author id and value = author name
@@ -23,26 +23,25 @@ public function create($id)
         $authorsForDropdown[$author->id] = $author->last_name.', '.$author->first_name;
     }
 
-    # Make sure $authorsForDropdown is made available the view
     return view('book.edit')->with([
         'book' => $book,
-        'authorsForDropdown' => $authorsForDropdown
+        'authorsForDropdown' => $authorsForDropdown # Make $authorsForDropdown available for the view
     ]);
 ```
 
 Construct the dropdown (`<select>`) in the view using this data:
 
 ```html
-<label for='author'>* Author:</label>
-<select name='author' id='author'>
-    <option value='' selected='selected' disabled='disabled'>Choose one...</option>
-    @foreach($authorsForDropdown as $id => $name)
-        <option value='{{ $id }}'>{{ $name }}</option>
+<label for='author_id'>* Author</label>
+<select name='author_id' id='author_id'>
+    <option value=''>Choose one...</option>
+    @foreach($authorsForDropdown as $id => $authorName)
+        <option value='{{ $id }}' {{ ($book->author_id == $id) ? 'selected' : '' }}>{{ $authorName }}</option>
     @endforeach
 </select>
 ```
 
-Update the `BookController@store` method so also save the author details about the book.
+Update the `BookController@store` method to also save the author details about the book.
 
 One way to do this:
 ```php
@@ -63,12 +62,18 @@ Rather than duplicate the &ldquo;get authors for dropdown&rdquo; code, we can ex
 
 ```php
 # app/Author.php
+/**
+ * Return an array of author id => author name
+ */
 public static function getForDropdown()
 {
-    $authors = Author::orderBy('last_name')->get();
+    $authors = self::orderBy('last_name')->get();
+
+    $authorsForDropdown = [];
     foreach ($authors as $author) {
-        $authorsForDropdown[$author->id] = $author->first_name.' '.$author->last_name;
+        $authorsForDropdown[$author->id] = $author->getFullName($reverse = true);
     }
+
     return $authorsForDropdown;
 }
 ```
@@ -78,21 +83,12 @@ Then in `BookController@create`:
 $authorsForDropdown = Author::getForDropdown();
 ```
 
-Other frequently used queries can also be abstracted, for example the following method could be added to the Book model:
-
-```php
-public static function getAllWithAuthors()
-{
-    return Book::with('author')->orderBy('id','desc')->get();
-}
-```
-
 
 ## Validation
 ```php
 $this->validate($request, [
     'title' => 'required|min:3',
-    'author' => 'required', # <----
+    'author_id' => 'required', # <----
     'published' => 'required|min:4|numeric',
     'purchase_link' => 'required|url',
     'cover' => 'required|url',

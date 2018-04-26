@@ -1,6 +1,6 @@
 # Foobooks: Many to Many
 
-The following is a __rough outline__ of modifications I'll make to Foobooks during Week 13.
+The following is a __rough outline__ of modifications I'll make to Foobooks during Week 13's lectures.
 
 __This should not be considered a stand-alone document; for full details please refer to the lecture video and the Foobooks code source.__
 
@@ -76,14 +76,20 @@ Use this array of tags to construct the checkboxes in the view:
 
 # [...]
 
-@foreach ($tagsForCheckboxes as $id => $name)
-    <input
-        type='checkbox'
-        value='{{ $id }}'
-        name='tags[]'
-        {{ (isset($tags) and in_array($name, $tags)) ? 'CHECKED' : '' }}
-    >
-    {{ $name }} <br>
+<label>Tags</label>
+@foreach($tagsForCheckboxes as $tagId => $tagName)
+    <ul class='tags'>
+        <li>
+            <label>
+                <input
+                    {{ (in_array($tagId, $tags)) ? 'checked' : '' }}
+                    type='checkbox'
+                    name='tags[]'
+                    value='{{ $tagId }}'>
+                {{ $tagName }}
+            </label>
+        </li>
+    </ul>
 @endforeach
 
 # [...]
@@ -99,13 +105,17 @@ public function update(Request $request, $id)
     # Find and update book
     $book = Book::find($request->id);
 
+    # Sync the tags
     $book->tags()->sync($request->input('tags')); # <---
 
+     # Update other book data
     $book->title = $request->title;
-    $book->cover = $request->cover;
     $book->published_year = $request->published_year;
-    $book->purchase_url = $request->purchase_url;
+    $book->author_id = $request->author_id;
     $book->cover_url = $request->cover_url;
+    $book->purchase_url = $request->purchase_url;
+
+    # Save edits
     $book->save();
 
     # [...finish removed for brevity..]
@@ -132,16 +142,6 @@ public function delete(Request $request)
     return redirect('/books')->with('alert', $book->title.' was removed.');
 }
 ```
-
-
-
-
-## Misc changes 
-In addition to the above, you'll also see the following changes reflected in the Foobooks code base. These changes were not shown in the lecture videos because they utilize concepts we've already covered.
-
-+ Moved the tag checkbox code to its own view (`tagsForCheckboxes`) so it can be used on both Edit and Add book pages.
-+ Integrated tags feature into the Add book page.
-+ Added some more tags to the seeds.
 
 
 
