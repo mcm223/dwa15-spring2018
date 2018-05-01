@@ -358,16 +358,14 @@ use App\User;
 
 public function run()
 {
-    $user = User::firstOrCreate([
-        'email' => 'jill@harvard.edu',
-        'name' => 'Jill Harvard',
-        'password' => Hash::make('helloworld')
+    $user = User::updateOrCreate(
+        ['email' => 'jill@harvard.edu', 'name' => 'Jill Harvard'],
+        ['password' => Hash::make('helloworld')
     ]);
-
-    $user = User::firstOrCreate([
-        'email' => 'jamal@harvard.edu',
-        'name' => 'Jamal Harvard',
-        'password' => Hash::make('helloworld')
+    
+      $user = User::updateOrCreate(
+        ['email' => 'jamal@harvard.edu', 'name' => 'Jamal Harvard'],
+        ['password' => Hash::make('helloworld')
     ]);
 }
 ```
