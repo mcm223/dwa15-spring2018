@@ -40,6 +40,7 @@ If you have a suggestion regarding a particular topic (correction, typo, etc.), 
         + [Increasing server security](/servers-and-git/increasing-server-security.md)
         + [DigitalOcean: Permission Denied (publickey)](servers-and-git/permission-denied-public-key.md)
         + [Deployment script](servers-and-git/deployment-script.md)
+        + [HTTPS/SSL](/servers-and-git/https-ssl.md)
 + PHP
     + [Intro](/php/intro.md)
     + [Syntax](/php/syntax.md)
@@ -62,7 +63,7 @@ If you have a suggestion regarding a particular topic (correction, typo, etc.), 
         + [Garbage collection](/php/garbage-collection.md)
         + [Extending Form.php](/php/form.php-extending.md)
         + [Cookies & Sessions](/php/cookies-and-sessions.md)
-+ Laravel
+ + Laravel
     + [Preface](/laravel/preface.md)
     + [Frameworks intro](/laravel/frameworks-intro.md)
     + [Composer intro](/laravel/composer-intro.md)
@@ -91,6 +92,23 @@ If you have a suggestion regarding a particular topic (correction, typo, etc.), 
         + [Primer](/laravel/db-primer.md)
         + [Local database configuration](/laravel/db-local-config.md)
         + [Migrations](/laravel/db-migrations.md)
+        + [CRUD: Create, Read, Update, Delete](/laravel/db-crud.md)
+        + [Eloquent](/laravel/db-eloquent.md)
+        + [Query examples](/laravel/db-query-examples.md)
+        + [Seeders](/laravel/db-seeders.md)
+        + [Production database setup](/laravel/db-production.md)
+        + [Collections](/laravel/db-collections.md)
+        + [Foobooks: CRUD](/laravel/foobooks-week12.md)
+        + [Relationships: One to Many](/laravel/db-one-to-many.md)
+        + [Foobooks: One to Many](/laravel/foobooks-week-13a.md)
+        + [Relationships: Many to Many](/laravel/db-many-to-many.md)
+        + [Foobooks: Many to Many](/laravel/foobooks-week-13b.md)
+    + [Auth setup](/laravel/auth-setup.md)
+    + [Auth usage](/laravel/auth-usage.md)
+    + [Auth in Foobooks](/laravel/auth-foobooks.md)
     + Extras
         + [Practice work](/laravel/practice-work.md)
         + [Blade cheat sheet](/laravel/blade-cheat-sheet.md)
+        + [Eloquent vs. Query Builder](/laravel/db-eloquent-vs-qb.md)
+        
+

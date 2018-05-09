@@ -35,7 +35,7 @@ return [
 ];
 ```
 
-After adding a new config, run `php artisan config:clear` so that your application recognizes the change.
+After adding a new config, run `php artisan config:clear` to ensure your application recognizes the change.
 
 Now, whenever you want to display this address, you can pull it from the config:
 

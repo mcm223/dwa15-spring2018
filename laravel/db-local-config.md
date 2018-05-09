@@ -59,6 +59,8 @@ Note that `DB_PASSWORD` is purposefully left blank.
 
 (FYI The above values are found in `C:/xampp/passwords.txt`)
 
+After making the above changes, run `php artisan config:clear` to ensure Laravel recognizes the new configs.
+
 __Do not worry about your production database or production .env file this week. We'll address production databases in Week 11.__
 
 
